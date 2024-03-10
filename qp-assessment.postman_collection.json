@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "4a74f3c7-b189-4bc6-afc8-44fbf68c3b4d",
+		"name": "qp-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17763275"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List-Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/list-products?search=&category=1&brand=&lastId=&sort=ASC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"list-products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "category",
+									"value": "1"
+								},
+								{
+									"key": "brand",
+									"value": ""
+								},
+								{
+									"key": "lastId",
+									"value": ""
+								},
+								{
+									"key": "sort",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add-Increment-Decrement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": 1,\n    \"customerId\": 1,\n    \"type\" : \"dec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/add-to-cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"add-to-cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place-order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add-Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bdsad",
+							"type": "text"
+						},
+						{
+							"key": "categories",
+							"value": "1,2",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "hsn",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "barcode",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "tax",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "unit",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sku",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "increment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "min_quantity",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "max_quantity",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "purchase_price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mrp",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sale_price",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "cover_file",
+							"type": "file",
+							"src": "/home/pradeep/Downloads/category.csv"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/home/pradeep/Downloads/x-circle(6).svg"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/home/pradeep/Downloads/login-img.c94f716d194cab3204a8.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"add-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get-All-Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/get-all-product?search=&pageSize=10&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get-all-product"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": ""
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Manage-Inventory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
