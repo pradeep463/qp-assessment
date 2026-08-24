@@ -6,6 +6,7 @@ import { Episode1, episode1DurationInFrames } from "./episode1/Episode1";
 import { WelcomeBumper } from "./episode1/scenes/WelcomeBumper";
 import { Outro } from "./episode1/scenes/Outro";
 import { Thumbnail } from "./episode1/Thumbnail";
+import { Case1Preview } from "./episode1/preview/Case1Preview";
 import { VIDEO } from "./theme";
 import { CVIDEO } from "./crime/theme";
 import { EVIDEO } from "./episode1/theme";
@@ -62,6 +63,14 @@ export const RemotionRoot: React.FC = () => (
       fps={EVIDEO.fps}
       width={1280}
       height={720}
+    />
+    <Composition
+      id="Case1Preview"
+      component={Case1Preview}
+      durationInFrames={Math.round(61.0 * EVIDEO.fps)}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
     />
   </>
 );
