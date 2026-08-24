@@ -3,6 +3,10 @@ node_modules
 out/*.png
 out/samples
 out/*.wav
+# intermediate render artifacts — only the final muxed out/episode1.mp4 ships
+out/episode1-main.mp4
+out/welcome.mp4
+out/outro.mp4
 .vo-tmp
 .kokoro
 __pycache__
