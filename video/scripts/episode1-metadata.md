@@ -4,41 +4,70 @@ Runtime (final concatenated file): **10:57** — confirmed against the current
 render (`out/episode1.mp4`, 88MB, 1080p24, under GitHub's 100MB limit with no
 extra compression needed).
 
-## Why these picks (the short version)
+## Deep-research findings (Aug 2026) that drove every pick below
 
-YouTube's 2026 ranking weighs **viewer satisfaction** and **session
-contribution** (does this video keep someone on YouTube afterward) above
-raw watch time, and it loses ~55% of viewers within the first 60 seconds on
-a failed hook. That means every metadata choice below is optimized for two
-things in order: (1) get the *right* viewer to click — someone who will
-actually watch and rate it well, not just anyone — and (2) make good on
-what the title/thumbnail promised within the first 8 seconds, so the click
-doesn't turn into an early exit. Curiosity-gap titles that overpromise
-farm clicks but tank satisfaction and get suppressed; specific, factual
-titles undersell but hold retention. The picks below lean specific.
+- **"Quality CTR" is the 2026 shift.** YouTube no longer just rewards a
+  click — it now evaluates what happens in the ~30 seconds *after* the
+  click. High-CTR-but-quick-exit ("click-and-quit") is actively penalized.
+  A title/thumbnail that overpromises can still win the click and lose on
+  ranking. This is the single biggest reason to stay specific rather than
+  vague — it's not just an ethics preference, it's now a ranking penalty.
+- **Satisfaction, repeat views, and shares now outrank raw watch time**, and
+  watch time itself is increasingly measured as **session contribution**
+  (did this video keep the viewer on YouTube afterward, not just on this
+  video) — reinforces the playlist/end-screen advice below.
+- **Title mechanics:** title is responsible for roughly half of a video's
+  CTR (thumbnail is the other half); 2026 guidance favors **65–80
+  characters total**, with the hook + primary keyword front-loaded into the
+  **first 40–50 characters** for mobile truncation.
+- **True-crime-specific packaging:** the four highest-CTR thumbnail *text*
+  formulas are the revelation hook ("Nobody Was Supposed to Know"), the
+  timeline hook ("11 Years. No Arrest."), the witness hook ("She Saw
+  Everything"), and the system-failure hook — capped at 3–4 words per text
+  element. On the visual side, the highest-performing "tension objects" are
+  case-file documents, red string connecting evidence, and shadowed
+  figures — which is, encouragingly, already this channel's exact visual
+  language. 73% of true-crime views happen on mobile, so anything that
+  collapses into a dark blur at thumbnail size is a real risk.
+- **Description mechanics:** only the first ~100–150 characters show before
+  "Show more," so the primary keyword needs to land in the **first two
+  sentences**; full description should run 200–300+ words for SEO context;
+  3–7 links is the sweet spot, prioritizing internal YouTube links (builds
+  session time) over external ones.
+- **Tags matter far less than most guides claim.** YouTube's own guidance
+  says tags now mainly help with misspellings/disambiguation, not
+  discovery. The 2026 consensus is **8–12 focused tags** and then stop —
+  time spent past that is better spent refining the thumbnail or title,
+  which have "10–20x more impact."
 
-## Title (pick one — all under 70 chars, no unresolved clickbait per channel policy)
+Sources: [YouTube CTR Benchmarks 2026](https://humbleandbrag.com/blog/youtube-ctr-benchmarks) · [YouTube Title Formulas 2026](https://fluxnote.io/guides/how-to-write-viral-youtube-titles-2026) · [YouTube Title Length Best Practices 2026](https://ytzolo.com/blog/youtube-video-title-length-best-practices-2026/) · [YouTube Algorithm 2026: Viewer Satisfaction Replaces Watch Time](https://outlierkit.com/resources/youtube-viewer-satisfaction-algorithm-2026/) · [YouTube Ranking Factors 2026](https://rankxdigital.com/blog/youtube-ranking-factors/) · [YouTube Description Best Practices 2026](https://touhfa.art/blog/seo/youtube-description-guide/) · [Do YouTube Tags Still Matter in 2026?](https://alanspicer.com/do-youtube-tags-still-matter-2026/) · [YouTube Tags Best Practices 2026](https://touhfa.art/blog/seo/youtube-tags-guide/) · [YouTube Thumbnail Design for True Crime Channels](https://tubevertex.com/youtube-thumbnail-design-for-true-crime-channels-in-usa-2026-dramatic-high-ctr-thumbnails-that-stop-the-scroll-and-pull-viewers-into-every-episode/) · [YouTube Thumbnail CTR designs](https://vidiq.com/blog/post/youtube-custom-thumbnails-ctr/)
 
-**Primary:** `The First Murder in Human History (430,000 Years Ago)`
-— leads with the single strongest, most concrete claim (a real number beats
-a vague tease for CTR-with-satisfaction), and "first murder" + "human
-history" are both decent search terms on their own.
+## Title (pick one)
 
-Alternates (use for a thumbnail/title A-B test in YouTube Studio after 48h
-if early CTR is under ~4%):
-- `5 "Firsts" That Built True Crime — Case File 001`
-- `The Oldest Cold Case on Earth Is 5,300 Years Old`
-- `The Oldest Murder Ever Found... And 4 Other Firsts`
+**Primary:** `The Oldest Murder Ever Found — 430,000 Years, No Suspect` (58 chars)
+Front-loads the strongest concrete claim ("oldest murder ever found") into
+the first ~30 characters for mobile, hits the 2026 length guidance, and the
+back half ("no suspect") functions as a light timeline-hook without
+overpromising — the cold open and Case 01 pay it off within the first
+90 seconds, so it should hold up under "Quality CTR."
 
-Avoid titles like "You Won't Believe..." or unresolved ellipsis-bait — the
-channel's own sourcing/no-fake-certainty positioning is a differentiator in
-true crime; the title should telegraph that, not undercut it.
+Alternates (use for a title A/B test in YouTube Studio once the channel
+clears 1,000 subs and has traffic; until then, pick one and don't split-test):
+- `5 "Firsts" That Built True Crime — Case File 001` (49 chars)
+- `The Oldest Cold Case on Earth Is 5,300 Years Old` (49 chars)
+- `430,000 Years. Still No Suspect. (5 First Crimes)` (51 chars)
+
+Avoid titles like "You Won't Believe..." or unresolved ellipsis-bait —
+beyond the channel's own sourcing/no-fake-certainty positioning, it's now a
+direct Quality-CTR risk: a title that overpromises and gets a fast exit is
+actively penalized, not just ethically off-brand.
 
 ## Description
 
 ```
-Before there were laws. Before there was a word for "murder." Someone still
-swung twice — 430,000 years ago.
+The oldest murder ever found is 430,000 years old — and it's still, by any
+formal standard, unsolved. Before there were laws, before "murder" had a
+name, someone still swung twice.
 
 This is Case File 001: five verified "firsts" that quietly built the entire
 idea of crime and justice — the oldest suspected murder, the oldest cold
@@ -82,22 +111,19 @@ comments.
 #TrueCrime #CrimeHistory #Archaeology #ColdCase #Forensics #Otzi #CipherStudios
 ```
 
-## Tags (YouTube tags field — comma separated, ~500 char budget)
+## Tags (YouTube tags field)
 
-Mix of broad/high-volume terms (get you into general true-crime suggested
-feeds) and specific long-tail terms (each case name is its own small search
-niche — Ötzi and forensic entomology in particular get steady organic
-search traffic year-round independent of this video):
+2026 research is consistent: tags are one of the lowest-weighted signals
+left in the algorithm (mainly disambiguation/misspellings now, not
+discovery) — YouTube's own guidance says so directly. Past 8–12 focused
+tags, more time on tags is time taken from the title/thumbnail, which move
+10–20x more. Trimmed down accordingly to the highest-relevance mix of one
+broad category term, one format term, and the five case-specific long-tail
+terms that get steady organic search on their own:
 
 ```
-true crime, crime history, oldest murder, otzi the iceman, otzi mummy,
-cold case, forensic science, code of ur-nammu, ancient law, oldest law,
-serial killer history, locusta of gaul, locusta poisoner, song ci,
-washing away of wrongs, forensic entomology, archaeology documentary,
-true crime documentary, crime documentary, unsolved mysteries,
-history documentary, ancient crimes, first serial killer, oldest cold case,
-murder mystery, true crime channel, real crime stories, history of forensics,
-case file, true crime 2026
+true crime, crime documentary, oldest murder, cold case, otzi the iceman,
+code of ur-nammu, locusta of gaul, song ci, forensic entomology
 ```
 
 ## Category
@@ -153,6 +179,21 @@ or the fly? Let us know below. Case File 002 is already in research. 🗂️
 ## Thumbnail
 
 `out/thumbnail.png` (1280×720) — bold case-file skull card + "THE FIRST
-CRIMES" + "430,000 YEARS OF EVIDENCE" + channel wordmark. High-contrast,
-minimal text, per the channel's own thumbnail research (contrast lifts
-CTR more than a specific hue; keep to 3–5 words).
+CRIMES" + "430,000 YEARS OF EVIDENCE" + channel wordmark, on the dark
+evidence-board background used throughout the episode.
+
+This happens to already match what 2026 true-crime thumbnail research finds
+highest-performing: a near-black background with a single accent color
+(ours is blood red — the deep red-black variant research ties to violent
+crime specifically), and a "tension object" — case-file documents / red
+string / evidence markers are named as the single most effective visual
+category, ahead of stock photos or generic text cards.
+
+One tightening worth doing before upload: "430,000 YEARS OF EVIDENCE" is 4
+words, at the outer edge of the 3–4-word ceiling 2026 research puts on
+thumbnail text (more text = it collapses into noise at 73%-mobile viewing
+sizes). Two lower-risk swaps if you want to test:
+- `430,000 YEARS. NO SUSPECT.` — timeline-hook formula
+- `430,000 YEARS OLD.` — same fact, one line, three words
+
+Keep "THE FIRST CRIMES" as the top line either way — it's already 3 words.
