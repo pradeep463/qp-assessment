@@ -1,24 +1,16 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, interpolate, random } from "remotion";
+import { AbsoluteFill, staticFile, useCurrentFrame, interpolate, random } from "remotion";
 import { CC } from "../theme";
 
-// Shared SVG filter defs for the case-file look: paper grain, heavy film
-// grain, torn-edge displacement, and soft/hard shadows.
+// Shared SVG filter defs — just the drop shadows. Grain/fiber texture used
+// to be procedural feTurbulence filters, but those are recomputed by Chrome
+// on every single frame even though the noise itself never changes (no
+// per-frame seed), which made a multi-minute video render for hours. They
+// are now baked once into public/tex-*.png and tiled via CSS instead —
+// same look, no per-frame cost.
 export const CaseDefs: React.FC = () => (
   <svg width={0} height={0} style={{ position: "absolute" }}>
     <defs>
-      <filter id="cgrain">
-        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves={2} stitchTiles="stitch" result="n" />
-        <feColorMatrix in="n" type="saturate" values="0" />
-        <feComponentTransfer><feFuncA type="linear" slope="0.9" /></feComponentTransfer>
-        <feComposite operator="in" in2="SourceGraphic" />
-      </filter>
-      <filter id="cfibers">
-        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.026" numOctaves={3} seed={11} result="n" />
-        <feColorMatrix in="n" type="saturate" values="0" />
-        <feComponentTransfer><feFuncA type="linear" slope="0.08" /></feComponentTransfer>
-        <feComposite operator="in" in2="SourceGraphic" />
-      </filter>
       <filter id="cshadow" x="-40%" y="-40%" width="180%" height="180%">
         <feDropShadow dx="0" dy="14" stdDeviation="16" floodColor="#000" floodOpacity="0.55" />
       </filter>
@@ -32,9 +24,14 @@ export const CaseDefs: React.FC = () => (
 // Dark, textured corkboard/paper backdrop with a deep vignette.
 export const Board: React.FC = () => (
   <AbsoluteFill style={{ backgroundColor: CC.board }}>
-    <AbsoluteFill style={{ filter: "url(#cfibers)" }}>
-      <div style={{ width: "100%", height: "100%", background: "#6b5a3a" }} />
-    </AbsoluteFill>
+    <AbsoluteFill
+      style={{
+        backgroundImage: `url(${staticFile("tex-fiber.png")})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "512px 512px",
+        opacity: 0.5,
+      }}
+    />
     <AbsoluteFill
       style={{
         background:
@@ -70,11 +67,16 @@ export const Grain: React.FC = () => {
           pointerEvents: "none",
         }}
       />
-      <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.5, pointerEvents: "none" }}>
-        <svg width="100%" height="100%">
-          <rect width="100%" height="100%" fill="#808080" filter="url(#cgrain)" />
-        </svg>
-      </AbsoluteFill>
+      <AbsoluteFill
+        style={{
+          backgroundImage: `url(${staticFile("tex-grain.png")})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "512px 512px",
+          mixBlendMode: "overlay",
+          opacity: 0.5,
+          pointerEvents: "none",
+        }}
+      />
       {/* moving scanline shimmer */}
       <AbsoluteFill
         style={{

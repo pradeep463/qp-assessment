@@ -1,0 +1,72 @@
+import React from "react";
+import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
+import { CaseDefs, Board, Grain } from "../crime/components/Atmosphere";
+import { CASE_ICONS } from "./icons";
+import { ColdOpen } from "./scenes/ColdOpen";
+import { Intro } from "./scenes/Intro";
+import { CaseScene } from "./scenes/CaseScene";
+import { Transition } from "./scenes/Transition";
+import { Close } from "./scenes/Close";
+import { EVIDEO } from "./theme";
+import timing from "./timing.json";
+
+const FPS = EVIDEO.fps;
+const toFrame = (s: number) => Math.round(s * FPS);
+
+type TimingBeat = { i: number; case: number; bridgeTo: number | null; card: string | null; text: string; start: number; end: number };
+
+function groupByCase(beats: TimingBeat[]) {
+  const groups: { case: number; beats: TimingBeat[] }[] = [];
+  for (const b of beats) {
+    const last = groups[groups.length - 1];
+    if (last && last.case === b.case) last.beats.push(b);
+    else groups.push({ case: b.case, beats: [b] });
+  }
+  return groups;
+}
+
+export const TAIL_HOLD_SECONDS = 2.5;
+
+export const episode1DurationInFrames = toFrame((timing as any).totalSeconds + TAIL_HOLD_SECONDS);
+
+export const Episode1: React.FC<{ voiceover?: boolean }> = ({ voiceover = true }) => {
+  const groups = groupByCase((timing as any).beats as TimingBeat[]);
+
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#0C0B09" }}>
+      <CaseDefs />
+      <Board />
+
+      {groups.map((g, gi) => {
+        const startFrame = toFrame(g.beats[0].start);
+        const nextStartFrame = gi + 1 < groups.length ? toFrame(groups[gi + 1].beats[0].start) : episode1DurationInFrames;
+        const durationInFrames = Math.max(1, nextStartFrame - startFrame);
+        const localBeats = g.beats.map((b) => ({ frame: toFrame(b.start) - startFrame, card: b.card }));
+
+        let content: React.ReactNode;
+        if (g.case === 0) {
+          content = <ColdOpen titleFrame={localBeats[2]?.frame ?? 0} />;
+        } else if (g.case === 1) {
+          content = <Intro cardFrame={localBeats[1]?.frame ?? 0} welcomeFrame={localBeats[3]?.frame ?? localBeats[localBeats.length - 1].frame} />;
+        } else if (g.case === 7) {
+          content = <Close beats={localBeats} />;
+        } else if (g.case < 0) {
+          const bridgeTo = g.beats[0].bridgeTo ?? -g.case;
+          content = <Transition NextIcon={CASE_ICONS[bridgeTo]} beatFrames={localBeats.map((b) => b.frame)} />;
+        } else {
+          const Icon = CASE_ICONS[g.case];
+          content = <CaseScene caseId={g.case} Icon={Icon} beats={localBeats} />;
+        }
+
+        return (
+          <Sequence key={gi} from={startFrame} durationInFrames={durationInFrames}>
+            {content}
+          </Sequence>
+        );
+      })}
+
+      <Grain />
+      {voiceover && <Audio src={staticFile("episode1-voiceover.mp3")} />}
+    </AbsoluteFill>
+  );
+};

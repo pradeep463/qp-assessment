@@ -1,0 +1,646 @@
+{
+  "totalSeconds": 630.291,
+  "voice": "am_onyx",
+  "speed": 0.9,
+  "beats": [
+    {
+      "i": 0,
+      "case": 0,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Before there were laws. Before there was a word for murder. Before anyone had ever been called a killer \u2014",
+      "start": 0.6,
+      "end": 6.573
+    },
+    {
+      "i": 1,
+      "case": 0,
+      "bridgeTo": null,
+      "card": null,
+      "text": "someone still swung twice.",
+      "start": 6.973,
+      "end": 9.576
+    },
+    {
+      "i": 2,
+      "case": 0,
+      "bridgeTo": null,
+      "card": "THE FIRST CRIMES",
+      "text": "This is CipherStudios. And these are the first crimes in human history \u2014 the ones that came before crime even had a name.",
+      "start": 9.976,
+      "end": 18.565
+    },
+    {
+      "i": 3,
+      "case": 1,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Every true crime story you've ever watched exists because, somewhere back in time, five things had to happen for the first time.",
+      "start": 19.765,
+      "end": 27.573
+    },
+    {
+      "i": 4,
+      "case": 1,
+      "bridgeTo": null,
+      "card": "5 FIRSTS",
+      "text": "The first murder. The first cold case. The first law. The first serial killer. And the first time anyone used science \u2014 actual science \u2014 to catch one.",
+      "start": 27.973,
+      "end": 36.997
+    },
+    {
+      "i": 5,
+      "case": 1,
+      "bridgeTo": null,
+      "card": null,
+      "text": "We're going to all five, in order \u2014 starting four hundred and thirty thousand years before any of it had a name.",
+      "start": 37.397,
+      "end": 43.968
+    },
+    {
+      "i": 6,
+      "case": 1,
+      "bridgeTo": null,
+      "card": "SOURCES, NOT LEGEND",
+      "text": "And if you're new here \u2014 welcome. This channel runs on primary sources, not legend. Court records, forensic papers, the actual historians. If that's what you came for, you're in the right place.",
+      "start": 44.368,
+      "end": 55.653
+    },
+    {
+      "i": 7,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "ATAPUERCA, SPAIN \u00b7 1984",
+      "text": "Nineteen eighty-four. Deep in the Atapuerca mountains of northern Spain, researchers find a vertical shaft, forty-three feet straight down, that opens into a cave.",
+      "start": 56.853,
+      "end": 67.768
+    },
+    {
+      "i": 8,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "28 INDIVIDUALS",
+      "text": "Inside: the bones of at least twenty-eight people. Thousands of years of an entire population, dumped at the bottom of a pit.",
+      "start": 68.168,
+      "end": 75.933
+    },
+    {
+      "i": 9,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "That alone was strange enough. Why were so many bodies in one hole?",
+      "start": 76.333,
+      "end": 80.877
+    },
+    {
+      "i": 10,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "CRANIUM 17",
+      "text": "Then, in twenty-fifteen, scientists reassembled one skull from fifty-two fragments. They called it Cranium 17.",
+      "start": 81.277,
+      "end": 88.893
+    },
+    {
+      "i": 11,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "2 WOUNDS \u00b7 SAME SHAPE",
+      "text": "And Cranium 17 had two holes in the forehead. Almost identical in shape and size. Both above the left eye. Both, on their own, likely fatal.",
+      "start": 89.293,
+      "end": 99.021
+    },
+    {
+      "i": 12,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Here's why that matters: an accidental fall tends to break one side of the skull, from one impact, at one angle.",
+      "start": 99.421,
+      "end": 106.632
+    },
+    {
+      "i": 13,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "NOT AN ACCIDENT",
+      "text": "These wounds came from the same kind of object, striking twice, from two different angles. In forensic terms \u2014 that's not a fall. That's a person, swinging something, more than once.",
+      "start": 107.032,
+      "end": 117.699
+    },
+    {
+      "i": 14,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "430,000 YEARS OLD",
+      "text": "The remains are at least four hundred and thirty thousand years old. Before our species, Homo sapiens, even existed. This wasn't left by us \u2014 it was left by an earlier human relative entirely.",
+      "start": 118.099,
+      "end": 129.896
+    },
+    {
+      "i": 15,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "HOMO HEIDELBERGENSIS",
+      "text": "The people in that pit have been identified as Homo heidelbergensis, an early human relative that, over time, gave rise to the Neanderthals.",
+      "start": 130.296,
+      "end": 139.448
+    },
+    {
+      "i": 16,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "OLDEST SUSPECTED MURDER",
+      "text": "Which would make it the oldest suspected murder ever found.",
+      "start": 139.848,
+      "end": 143.965
+    },
+    {
+      "i": 17,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "DISPUTED",
+      "text": "I have to be straight with you here, because this channel doesn't do fake certainty: not everyone agrees.",
+      "start": 144.365,
+      "end": 150.637
+    },
+    {
+      "i": 18,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Some researchers argue the injuries could still have another explanation, and the pit itself \u2014 why dozens of bodies ended up there at all \u2014 is still debated. Falls. Predators. Something else entirely.",
+      "start": 151.037,
+      "end": 163.261
+    },
+    {
+      "i": 19,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "What almost everyone does agree on is this: whatever happened to Cranium 17, the instinct to end a rival with a rock is not new. It might be the oldest instinct we have.",
+      "start": 163.661,
+      "end": 174.371
+    },
+    {
+      "i": 20,
+      "case": -2,
+      "bridgeTo": 3,
+      "card": null,
+      "text": "Four hundred thousand years is hard to feel. There's no name, no face, no story \u2014 just a skull in a museum drawer.",
+      "start": 175.571,
+      "end": 183.165
+    },
+    {
+      "i": 21,
+      "case": -2,
+      "bridgeTo": 3,
+      "card": null,
+      "text": "So let's fast-forward to a victim who still has one.",
+      "start": 183.565,
+      "end": 187.341
+    },
+    {
+      "i": 22,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "\u00d6TZTAL ALPS \u00b7 1991",
+      "text": "September, nineteen ninety-one. Two German hikers, off the marked trail near a glacier, find a body sticking out of the melting ice.",
+      "start": 188.541,
+      "end": 196.563
+    },
+    {
+      "i": 23,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "5,300 YEARS OLD",
+      "text": "It takes days before anyone realizes what they actually found: a man, freeze-dried by the ice for over five thousand years. Skin, organs, even his last meal \u2014 all still intact.",
+      "start": 196.963,
+      "end": 208.696
+    },
+    {
+      "i": 24,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "\u00d6TZI",
+      "text": "They name him \u00d6tzi.",
+      "start": 209.096,
+      "end": 210.781
+    },
+    {
+      "i": 25,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "For years, the leading theory was that he simply froze to death, alone, in a storm.",
+      "start": 211.181,
+      "end": 216.685
+    },
+    {
+      "i": 26,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "ARROWHEAD FOUND \u00b7 2001",
+      "text": "Then, in two-thousand-one, a radiologist looked closer at an X-ray and found something everyone had missed: a stone arrowhead, lodged just under his left shoulder.",
+      "start": 217.085,
+      "end": 226.835
+    },
+    {
+      "i": 27,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "SHOT FROM BEHIND",
+      "text": "Someone had shot him in the back. The arrow tore through an artery near his collarbone \u2014 at that range, he would have bled out in minutes.",
+      "start": 227.235,
+      "end": 234.701
+    },
+    {
+      "i": 28,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Homicide detectives were brought in to reconstruct it. Their read: \u00d6tzi was likely fleeing when he was hit from behind and below, meaning the shooter was some distance away, downhill.",
+      "start": 235.101,
+      "end": 246.763
+    },
+    {
+      "i": 29,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "DEFENSIVE WOUND",
+      "text": "There's more. His hand carries a deep, healed defensive wound, from a knife fight days before he died. Blood from at least two other people was found on his gear.",
+      "start": 247.163,
+      "end": 256.741
+    },
+    {
+      "i": 30,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Put together, it reads like the final chapter of something much longer: a conflict, a fight he survived, and then, days later, an ambush he didn't.",
+      "start": 257.141,
+      "end": 265.909
+    },
+    {
+      "i": 31,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "OLDEST COLD CASE",
+      "text": "\u00d6tzi is, formally, the oldest cold case on Earth. Full forensic file. Known cause of death. Known weapon.",
+      "start": 266.309,
+      "end": 273.413
+    },
+    {
+      "i": 32,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "STATUS: OPEN",
+      "text": "And after more than thirty years of investigation \u2014 zero suspects. The case is, and will always be, open.",
+      "start": 273.813,
+      "end": 280.96
+    },
+    {
+      "i": 33,
+      "case": -3,
+      "bridgeTo": 4,
+      "card": null,
+      "text": "A killing is a single moment. But a society deciding a killing deserves punishment \u2014 that's a choice.",
+      "start": 282.16,
+      "end": 288.752
+    },
+    {
+      "i": 34,
+      "case": -3,
+      "bridgeTo": 4,
+      "card": null,
+      "text": "And for most of human history, nobody had written that choice down. Until, in Mesopotamia, someone finally did.",
+      "start": 289.152,
+      "end": 296.491
+    },
+    {
+      "i": 35,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "MESOPOTAMIA \u00b7 c.2100 BCE",
+      "text": "Over two thousand years before Rome. Over three centuries before the more famous Code of Hammurabi.",
+      "start": 297.691,
+      "end": 304.261
+    },
+    {
+      "i": 36,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "CODE OF UR-NAMMU",
+      "text": "A Sumerian king named Ur-Nammu had a set of laws carved into clay tablets \u2014 and it survives today as the oldest complete legal code ever discovered.",
+      "start": 304.661,
+      "end": 314.517
+    },
+    {
+      "i": 37,
+      "case": 4,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Here's what's genuinely striking about it: it isn't just an eye for an eye.",
+      "start": 314.917,
+      "end": 319.76
+    },
+    {
+      "i": 38,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "PUNISHMENT SCALED TO CRIME",
+      "text": "For most bodily harm, the code prescribes financial compensation \u2014 you break someone's bone, you pay a fixed price in silver. A radically modern idea for four thousand years ago.",
+      "start": 320.16,
+      "end": 331.509
+    },
+    {
+      "i": 39,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "CAPITAL OFFENSES",
+      "text": "But for the worst offenses \u2014 murder, robbery, and rape \u2014 there was no fine that covered it. Those were capital crimes. Full stop.",
+      "start": 331.909,
+      "end": 339.675
+    },
+    {
+      "i": 40,
+      "case": 4,
+      "bridgeTo": null,
+      "card": null,
+      "text": "For the first time in the archaeological record, a society didn't just react to violence \u2014 it pre-defined it. It wrote down, in advance, exactly what would count as a crime.",
+      "start": 340.075,
+      "end": 350.741
+    },
+    {
+      "i": 41,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "CRIME, DEFINED",
+      "text": "That is the moment crime stops being just something terrible that happens, and starts being something a society formally decides to punish.",
+      "start": 351.141,
+      "end": 359.611
+    },
+    {
+      "i": 42,
+      "case": -4,
+      "bridgeTo": 5,
+      "card": null,
+      "text": "Laws punish a crime after the body's already found. They do nothing for the killer who's patient enough to make it look like nothing happened at all.",
+      "start": 360.811,
+      "end": 369.301
+    },
+    {
+      "i": 43,
+      "case": -4,
+      "bridgeTo": 5,
+      "card": null,
+      "text": "Which brings us to Rome, and the first killer we know of who did this again, and again, and again, for a living.",
+      "start": 369.701,
+      "end": 376.08
+    },
+    {
+      "i": 44,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "ROME \u00b7 1st CENTURY AD",
+      "text": "Her name was Locusta. Born in Gaul, roughly modern France, she grew up with an expert's knowledge of plants \u2014 which ones healed you, and which ones killed you slowly.",
+      "start": 377.28,
+      "end": 387.136
+    },
+    {
+      "i": 45,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "LOCUSTA OF GAUL",
+      "text": "In first-century Rome, that made her one of the most valuable, and most dangerous, people in the empire.",
+      "start": 387.536,
+      "end": 394.021
+    },
+    {
+      "i": 46,
+      "case": 5,
+      "bridgeTo": null,
+      "card": null,
+      "text": "She was first imprisoned for selling poison. But Empress Agrippina had a problem, her husband, the Emperor Claudius, and a plan for her son Nero to take the throne instead.",
+      "start": 394.421,
+      "end": 404.96
+    },
+    {
+      "i": 47,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "2ND ATTEMPT: SUCCESSFUL",
+      "text": "The job took two attempts. The first dose wasn't fatal. So Locusta refined it, and delivered it again, hidden in Claudius's favorite dish of mushrooms.",
+      "start": 405.36,
+      "end": 414.789
+    },
+    {
+      "i": 48,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "PROTECTED, NOT PUNISHED",
+      "text": "Claudius died. Nero took power. And Locusta wasn't punished \u2014 she was promoted. Land, students, the Emperor's protection.",
+      "start": 415.189,
+      "end": 422.933
+    },
+    {
+      "i": 49,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "RAN A POISON SCHOOL",
+      "text": "Nero didn't just protect her \u2014 he had her train other poisoners in his service. Rome's most notorious killer was, for a while, running an actual school.",
+      "start": 423.333,
+      "end": 432.805
+    },
+    {
+      "i": 50,
+      "case": 5,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Her next target, on Nero's order, was Britannicus, Claudius's own son. Poisoned at dinner, in front of witnesses, disguised as a sudden seizure.",
+      "start": 433.205,
+      "end": 442.656
+    },
+    {
+      "i": 51,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "EARLIEST DOCUMENTED SERIAL KILLER",
+      "text": "This is why historians call Locusta one of the earliest documented serial killers in the record: multiple victims, a repeatable method, and, for years, an employer who protected her instead of a court that punished her.",
+      "start": 443.056,
+      "end": 456.325
+    },
+    {
+      "i": 52,
+      "case": 5,
+      "bridgeTo": null,
+      "card": null,
+      "text": "When Nero eventually died, his successor had her executed. But by then, the method she'd built had already outlived multiple emperors.",
+      "start": 456.725,
+      "end": 465.472
+    },
+    {
+      "i": 53,
+      "case": -5,
+      "bridgeTo": 6,
+      "card": null,
+      "text": "For almost the entire span of human history after that, solving a murder meant one thing: find a witness, or force a confession. That was the entire toolkit.",
+      "start": 466.672,
+      "end": 476.443
+    },
+    {
+      "i": 54,
+      "case": -5,
+      "bridgeTo": 6,
+      "card": null,
+      "text": "Then, in the year twelve forty-seven, one man in China wrote down a method that had nothing to do with witnesses, torture, or confessions at all.",
+      "start": 476.843,
+      "end": 485.781
+    },
+    {
+      "i": 55,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "CHINA \u00b7 1247 AD",
+      "text": "His name was Song Ci, a coroner, and a judge. In twelve forty-seven, he compiled everything he'd learned into a book called The Washing Away of Wrongs.",
+      "start": 486.981,
+      "end": 496.816
+    },
+    {
+      "i": 56,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "SONG CI",
+      "text": "It's recognized today as the world's first textbook of forensic science.",
+      "start": 497.216,
+      "end": 501.867
+    },
+    {
+      "i": 57,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "It's full of firsts: how to tell a drowning from a body dumped in water after death, how wound patterns reveal what weapon made them.",
+      "start": 502.267,
+      "end": 510.501
+    },
+    {
+      "i": 58,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "THE SICKLE CASE",
+      "text": "And one case, from a village stabbing, that still gets taught today. A man is found dead, cut down with a bladed weapon. No witnesses. No confession.",
+      "start": 510.901,
+      "end": 520.224
+    },
+    {
+      "i": 59,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "The local magistrate has every man in the village lay his sickle down in the dirt, in public, side by side. Nothing looked different. Every blade had already been wiped clean.",
+      "start": 520.624,
+      "end": 531.227
+    },
+    {
+      "i": 60,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Then the flies arrived. And they ignored every sickle in that row, except one.",
+      "start": 531.627,
+      "end": 536.683
+    },
+    {
+      "i": 61,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "CONFESSED ON THE SPOT",
+      "text": "They swarmed a single blade, drawn to traces of blood and tissue too small for a human eye to see. The owner of that sickle confessed on the spot.",
+      "start": 537.083,
+      "end": 546.171
+    },
+    {
+      "i": 62,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "FIRST FORENSIC SCIENCE",
+      "text": "That is the first recorded case of forensic entomology, insects, used as evidence, seven hundred years before crime labs existed.",
+      "start": 546.571,
+      "end": 555.381
+    },
+    {
+      "i": 63,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "No confession extracted by force. No witness. Just a detail the killer didn't know he'd left behind, and a flaw in nature he never accounted for: he could clean a blade. He couldn't fool a fly.",
+      "start": 555.781,
+      "end": 567.579
+    },
+    {
+      "i": 64,
+      "case": 7,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Four hundred thirty thousand years, in one straight line: a rock, an arrow, a law, a poison, a fly.",
+      "start": 568.779,
+      "end": 575.285
+    },
+    {
+      "i": 65,
+      "case": 7,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Every single true crime case made since traces back to one of these five moments \u2014 the first time someone killed, the first time it went unsolved, the first time it was against the law, the first time it happened again on purpose, and the first time science caught up.",
+      "start": 575.685,
+      "end": 590.469
+    },
+    {
+      "i": 66,
+      "case": 7,
+      "bridgeTo": null,
+      "card": "CENTER THE VICTIM",
+      "text": "One thing hasn't changed in four hundred thirty thousand years: it's never really about the killer. It's about the person the story starts with \u2014 the one lying in the pit, in the ice, on the tablet.",
+      "start": 590.869,
+      "end": 602.027
+    },
+    {
+      "i": 67,
+      "case": 7,
+      "bridgeTo": null,
+      "card": null,
+      "text": "That's the rule this channel runs on. We follow the evidence, not the legend.",
+      "start": 602.427,
+      "end": 608.349
+    },
+    {
+      "i": 68,
+      "case": 7,
+      "bridgeTo": null,
+      "card": "MORE CASES COMING",
+      "text": "And this is only case one. There are more firsts still sitting in the record \u2014 more names, more evidence nobody's connected yet. That's what this channel exists to find.",
+      "start": 608.749,
+      "end": 618.584
+    },
+    {
+      "i": 69,
+      "case": 7,
+      "bridgeTo": null,
+      "card": "SUBSCRIBE \u2014 CIPHERSTUDIOS",
+      "text": "This has been Case File 001. If you want to be here when we open the next one, subscribe. CipherStudios.",
+      "start": 618.984,
+      "end": 626.451
+    },
+    {
+      "i": 70,
+      "case": 7,
+      "bridgeTo": null,
+      "card": "CASE CLOSED",
+      "text": "Case closed. For now.",
+      "start": 626.851,
+      "end": 629.091
+    }
+  ]
+}

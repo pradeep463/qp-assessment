@@ -25,7 +25,6 @@ export const TornCard: React.FC<{
       >
         <path d={tornRectPath(width, height, { seed: seed + 50, amp: amp + 3 })} fill={CC.bone} transform="translate(-2,-2)" opacity={0.5} />
         <path d={tornRectPath(width, height, { seed, amp })} fill={color} />
-        <path d={tornRectPath(width, height, { seed, amp })} fill="#000" filter="url(#cgrain)" opacity={0.2} />
       </svg>
       {children && <div style={{ position: "absolute", inset: 0 }}>{children}</div>}
     </div>
@@ -37,7 +36,6 @@ export const Pin: React.FC<{ x: number; y: number; size?: number; color?: string
   <div style={{ position: "absolute", left: x, top: y }}>
     <svg width={size} height={size} viewBox="0 0 100 100" style={{ overflow: "visible", filter: "url(#cshadowSm)" }}>
       <circle cx="50" cy="50" r="38" fill={color} />
-      <circle cx="50" cy="50" r="38" fill="#000" filter="url(#cgrain)" opacity={0.25} />
       <ellipse cx="38" cy="36" rx="13" ry="8" fill="#fff" opacity={0.35} />
     </svg>
   </div>

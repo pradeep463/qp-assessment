@@ -1,0 +1,87 @@
+{
+  "comment": "Episode 1 narration beats. Each beat is synthesized in order and placed sequentially (gaps in generate_episode.py) so `start`/`end` in the generated timing.json are ground truth for the Remotion timeline. `case` groups beats into a scene (0=cold open,1=intro,2..6=cases,7=close; odd 'transition' beats use case -1..-5 paired to the case they lead into via `bridgeTo`). `card` is an optional short fact-card label popped on screen at that beat.",
+  "beats": [
+    { "case": 0, "text": "Before there were laws. Before there was a word for murder. Before anyone had ever been called a killer —", "card": null },
+    { "case": 0, "text": "someone still swung twice.", "card": null },
+    { "case": 0, "text": "This is CipherStudios. And these are the first crimes in human history — the ones that came before crime even had a name.", "card": "THE FIRST CRIMES" },
+
+    { "case": 1, "text": "Every true crime story you've ever watched exists because, somewhere back in time, five things had to happen for the first time.", "card": null },
+    { "case": 1, "text": "The first murder. The first cold case. The first law. The first serial killer. And the first time anyone used science — actual science — to catch one.", "card": "5 FIRSTS" },
+    { "case": 1, "text": "We're going to all five, in order — starting four hundred and thirty thousand years before any of it had a name.", "card": null },
+    { "case": 1, "text": "And if you're new here — welcome. This channel runs on primary sources, not legend. Court records, forensic papers, the actual historians. If that's what you came for, you're in the right place.", "card": "SOURCES, NOT LEGEND" },
+
+    { "case": 2, "text": "Nineteen eighty-four. Deep in the Atapuerca mountains of northern Spain, researchers find a vertical shaft, forty-three feet straight down, that opens into a cave.", "card": "ATAPUERCA, SPAIN · 1984" },
+    { "case": 2, "text": "Inside: the bones of at least twenty-eight people. Thousands of years of an entire population, dumped at the bottom of a pit.", "card": "28 INDIVIDUALS" },
+    { "case": 2, "text": "That alone was strange enough. Why were so many bodies in one hole?", "card": null },
+    { "case": 2, "text": "Then, in twenty-fifteen, scientists reassembled one skull from fifty-two fragments. They called it Cranium 17.", "card": "CRANIUM 17" },
+    { "case": 2, "text": "And Cranium 17 had two holes in the forehead. Almost identical in shape and size. Both above the left eye. Both, on their own, likely fatal.", "card": "2 WOUNDS · SAME SHAPE" },
+    { "case": 2, "text": "Here's why that matters: an accidental fall tends to break one side of the skull, from one impact, at one angle.", "card": null },
+    { "case": 2, "text": "These wounds came from the same kind of object, striking twice, from two different angles. In forensic terms — that's not a fall. That's a person, swinging something, more than once.", "card": "NOT AN ACCIDENT" },
+    { "case": 2, "text": "The remains are at least four hundred and thirty thousand years old. Before our species, Homo sapiens, even existed. This wasn't left by us — it was left by an earlier human relative entirely.", "card": "430,000 YEARS OLD" },
+    { "case": 2, "text": "The people in that pit have been identified as Homo heidelbergensis, an early human relative that, over time, gave rise to the Neanderthals.", "card": "HOMO HEIDELBERGENSIS" },
+    { "case": 2, "text": "Which would make it the oldest suspected murder ever found.", "card": "OLDEST SUSPECTED MURDER" },
+    { "case": 2, "text": "I have to be straight with you here, because this channel doesn't do fake certainty: not everyone agrees.", "card": "DISPUTED" },
+    { "case": 2, "text": "Some researchers argue the injuries could still have another explanation, and the pit itself — why dozens of bodies ended up there at all — is still debated. Falls. Predators. Something else entirely.", "card": null },
+    { "case": 2, "text": "What almost everyone does agree on is this: whatever happened to Cranium 17, the instinct to end a rival with a rock is not new. It might be the oldest instinct we have.", "card": null },
+
+    { "case": -2, "bridgeTo": 3, "text": "Four hundred thousand years is hard to feel. There's no name, no face, no story — just a skull in a museum drawer.", "card": null },
+    { "case": -2, "bridgeTo": 3, "text": "So let's fast-forward to a victim who still has one.", "card": null },
+
+    { "case": 3, "text": "September, nineteen ninety-one. Two German hikers, off the marked trail near a glacier, find a body sticking out of the melting ice.", "card": "ÖTZTAL ALPS · 1991" },
+    { "case": 3, "text": "It takes days before anyone realizes what they actually found: a man, freeze-dried by the ice for over five thousand years. Skin, organs, even his last meal — all still intact.", "card": "5,300 YEARS OLD" },
+    { "case": 3, "text": "They name him Ötzi.", "card": "ÖTZI" },
+    { "case": 3, "text": "For years, the leading theory was that he simply froze to death, alone, in a storm.", "card": null },
+    { "case": 3, "text": "Then, in two-thousand-one, a radiologist looked closer at an X-ray and found something everyone had missed: a stone arrowhead, lodged just under his left shoulder.", "card": "ARROWHEAD FOUND · 2001" },
+    { "case": 3, "text": "Someone had shot him in the back. The arrow tore through an artery near his collarbone — at that range, he would have bled out in minutes.", "card": "SHOT FROM BEHIND" },
+    { "case": 3, "text": "Homicide detectives were brought in to reconstruct it. Their read: Ötzi was likely fleeing when he was hit from behind and below, meaning the shooter was some distance away, downhill.", "card": null },
+    { "case": 3, "text": "There's more. His hand carries a deep, healed defensive wound, from a knife fight days before he died. Blood from at least two other people was found on his gear.", "card": "DEFENSIVE WOUND" },
+    { "case": 3, "text": "Put together, it reads like the final chapter of something much longer: a conflict, a fight he survived, and then, days later, an ambush he didn't.", "card": null },
+    { "case": 3, "text": "Ötzi is, formally, the oldest cold case on Earth. Full forensic file. Known cause of death. Known weapon.", "card": "OLDEST COLD CASE" },
+    { "case": 3, "text": "And after more than thirty years of investigation — zero suspects. The case is, and will always be, open.", "card": "STATUS: OPEN" },
+
+    { "case": -3, "bridgeTo": 4, "text": "A killing is a single moment. But a society deciding a killing deserves punishment — that's a choice.", "card": null },
+    { "case": -3, "bridgeTo": 4, "text": "And for most of human history, nobody had written that choice down. Until, in Mesopotamia, someone finally did.", "card": null },
+
+    { "case": 4, "text": "Over two thousand years before Rome. Over three centuries before the more famous Code of Hammurabi.", "card": "MESOPOTAMIA · c.2100 BCE" },
+    { "case": 4, "text": "A Sumerian king named Ur-Nammu had a set of laws carved into clay tablets — and it survives today as the oldest complete legal code ever discovered.", "card": "CODE OF UR-NAMMU" },
+    { "case": 4, "text": "Here's what's genuinely striking about it: it isn't just an eye for an eye.", "card": null },
+    { "case": 4, "text": "For most bodily harm, the code prescribes financial compensation — you break someone's bone, you pay a fixed price in silver. A radically modern idea for four thousand years ago.", "card": "PUNISHMENT SCALED TO CRIME" },
+    { "case": 4, "text": "But for the worst offenses — murder, robbery, and rape — there was no fine that covered it. Those were capital crimes. Full stop.", "card": "CAPITAL OFFENSES" },
+    { "case": 4, "text": "For the first time in the archaeological record, a society didn't just react to violence — it pre-defined it. It wrote down, in advance, exactly what would count as a crime.", "card": null },
+    { "case": 4, "text": "That is the moment crime stops being just something terrible that happens, and starts being something a society formally decides to punish.", "card": "CRIME, DEFINED" },
+
+    { "case": -4, "bridgeTo": 5, "text": "Laws punish a crime after the body's already found. They do nothing for the killer who's patient enough to make it look like nothing happened at all.", "card": null },
+    { "case": -4, "bridgeTo": 5, "text": "Which brings us to Rome, and the first killer we know of who did this again, and again, and again, for a living.", "card": null },
+
+    { "case": 5, "text": "Her name was Locusta. Born in Gaul, roughly modern France, she grew up with an expert's knowledge of plants — which ones healed you, and which ones killed you slowly.", "card": "ROME · 1st CENTURY AD" },
+    { "case": 5, "text": "In first-century Rome, that made her one of the most valuable, and most dangerous, people in the empire.", "card": "LOCUSTA OF GAUL" },
+    { "case": 5, "text": "She was first imprisoned for selling poison. But Empress Agrippina had a problem, her husband, the Emperor Claudius, and a plan for her son Nero to take the throne instead.", "card": null },
+    { "case": 5, "text": "The job took two attempts. The first dose wasn't fatal. So Locusta refined it, and delivered it again, hidden in Claudius's favorite dish of mushrooms.", "card": "2ND ATTEMPT: SUCCESSFUL" },
+    { "case": 5, "text": "Claudius died. Nero took power. And Locusta wasn't punished — she was promoted. Land, students, the Emperor's protection.", "card": "PROTECTED, NOT PUNISHED" },
+    { "case": 5, "text": "Nero didn't just protect her — he had her train other poisoners in his service. Rome's most notorious killer was, for a while, running an actual school.", "card": "RAN A POISON SCHOOL" },
+    { "case": 5, "text": "Her next target, on Nero's order, was Britannicus, Claudius's own son. Poisoned at dinner, in front of witnesses, disguised as a sudden seizure.", "card": null },
+    { "case": 5, "text": "This is why historians call Locusta one of the earliest documented serial killers in the record: multiple victims, a repeatable method, and, for years, an employer who protected her instead of a court that punished her.", "card": "EARLIEST DOCUMENTED SERIAL KILLER" },
+    { "case": 5, "text": "When Nero eventually died, his successor had her executed. But by then, the method she'd built had already outlived multiple emperors.", "card": null },
+
+    { "case": -5, "bridgeTo": 6, "text": "For almost the entire span of human history after that, solving a murder meant one thing: find a witness, or force a confession. That was the entire toolkit.", "card": null },
+    { "case": -5, "bridgeTo": 6, "text": "Then, in the year twelve forty-seven, one man in China wrote down a method that had nothing to do with witnesses, torture, or confessions at all.", "card": null },
+
+    { "case": 6, "text": "His name was Song Ci, a coroner, and a judge. In twelve forty-seven, he compiled everything he'd learned into a book called The Washing Away of Wrongs.", "card": "CHINA · 1247 AD" },
+    { "case": 6, "text": "It's recognized today as the world's first textbook of forensic science.", "card": "SONG CI" },
+    { "case": 6, "text": "It's full of firsts: how to tell a drowning from a body dumped in water after death, how wound patterns reveal what weapon made them.", "card": null },
+    { "case": 6, "text": "And one case, from a village stabbing, that still gets taught today. A man is found dead, cut down with a bladed weapon. No witnesses. No confession.", "card": "THE SICKLE CASE" },
+    { "case": 6, "text": "The local magistrate has every man in the village lay his sickle down in the dirt, in public, side by side. Nothing looked different. Every blade had already been wiped clean.", "card": null },
+    { "case": 6, "text": "Then the flies arrived. And they ignored every sickle in that row, except one.", "card": null },
+    { "case": 6, "text": "They swarmed a single blade, drawn to traces of blood and tissue too small for a human eye to see. The owner of that sickle confessed on the spot.", "card": "CONFESSED ON THE SPOT" },
+    { "case": 6, "text": "That is the first recorded case of forensic entomology, insects, used as evidence, seven hundred years before crime labs existed.", "card": "FIRST FORENSIC SCIENCE" },
+    { "case": 6, "text": "No confession extracted by force. No witness. Just a detail the killer didn't know he'd left behind, and a flaw in nature he never accounted for: he could clean a blade. He couldn't fool a fly.", "card": null },
+
+    { "case": 7, "text": "Four hundred thirty thousand years, in one straight line: a rock, an arrow, a law, a poison, a fly.", "card": null },
+    { "case": 7, "text": "Every single true crime case made since traces back to one of these five moments — the first time someone killed, the first time it went unsolved, the first time it was against the law, the first time it happened again on purpose, and the first time science caught up.", "card": null },
+    { "case": 7, "text": "One thing hasn't changed in four hundred thirty thousand years: it's never really about the killer. It's about the person the story starts with — the one lying in the pit, in the ice, on the tablet.", "card": "CENTER THE VICTIM" },
+    { "case": 7, "text": "That's the rule this channel runs on. We follow the evidence, not the legend.", "card": null },
+    { "case": 7, "text": "And this is only case one. There are more firsts still sitting in the record — more names, more evidence nobody's connected yet. That's what this channel exists to find.", "card": "MORE CASES COMING" },
+    { "case": 7, "text": "This has been Case File 001. If you want to be here when we open the next one, subscribe. CipherStudios.", "card": "SUBSCRIBE — CIPHERSTUDIOS" },
+    { "case": 7, "text": "Case closed. For now.", "card": "CASE CLOSED" }
+  ]
+}
