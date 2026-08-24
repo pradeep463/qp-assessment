@@ -74,7 +74,14 @@ def synth_robust(k, text, voice, speed, lang, depth=0):
     that would drop the line from the narration entirely, so retry with
     escalating normalization before giving up.
     """
-    samples, sr = k.create(text, voice=voice, speed=speed, lang=lang)
+    try:
+        samples, sr = k.create(text, voice=voice, speed=speed, lang=lang)
+    except ValueError:
+        # e.g. "Nothing to synthesize, ... produced no phonemes" — a
+        # normalization step upstream (de-hyphenate, ascii-fold) can strip a
+        # short input down to nothing; treat like empty audio and keep
+        # falling through the cascade instead of crashing the whole run.
+        samples, sr = np.zeros(0, dtype=np.float32), 24000
     if len(samples) > 0:
         return samples, sr
 
@@ -97,14 +104,20 @@ def synth_robust(k, text, voice, speed, lang, depth=0):
             return joined, sr
 
     if depth <= 1:
-        # de-hyphenate compounds (observed trigger: "first-century")
-        despaced = re.sub(r"(?<=[A-Za-z])-(?=[A-Za-z])", " ", text)
+        # de-hyphenate compounds (observed trigger: "first-century", and the
+        # same thing between non-Latin characters, e.g. a transliterated
+        # "उर-नम्मू" — \S rather than [A-Za-z] so this also fires for
+        # Devanagari/Kannada script, not just English)
+        despaced = re.sub(r"(?<=\S)-(?=\S)", " ", text)
         if despaced != text:
             return synth_robust(k, despaced, voice, speed, lang, depth + 1)
 
     if depth <= 2:
         folded = _ascii_fold(text)
-        if folded and folded != text:
+        # ascii-folding a non-Latin script (Devanagari, Kannada, ...) strips
+        # the entire line rather than just an accented letter or two — only
+        # use the fold if it kept a meaningful amount of content.
+        if folded and folded != text and len(folded.strip()) >= 0.4 * len(text.strip()):
             return synth_robust(k, folded, voice, speed, lang, depth + 1)
 
     if depth <= 3:
@@ -113,7 +126,10 @@ def synth_robust(k, text, voice, speed, lang, depth=0):
         # speed by a few percent is inaudible but reliably dodges it
         candidates = {round(speed * 1.06, 4), round(speed * 0.94, 4), 1.0, 0.95}
         for cand in candidates - {speed}:
-            samples, sr = k.create(text, voice=voice, speed=cand, lang=lang)
+            try:
+                samples, sr = k.create(text, voice=voice, speed=cand, lang=lang)
+            except ValueError:
+                continue
             if len(samples) > 0:
                 return samples, sr
 
@@ -129,12 +145,14 @@ def main():
     ap.add_argument("--gap", type=float, default=0.35, help="seconds of silence between beats")
     ap.add_argument("--case-gap-extra", type=float, default=0.5, help="extra silence when the case changes")
     ap.add_argument("--out", default=os.path.join(PUB, "episode1-voiceover.mp3"))
+    ap.add_argument("--beats-file", default=BEATS, help="path to a beats.json-shaped file (e.g. beats.hi.json for a translated pass)")
+    ap.add_argument("--timing-out", default=TIMING_OUT)
     args = ap.parse_args()
 
     build_assets()
     from kokoro_onnx import Kokoro
 
-    data = json.load(open(BEATS))
+    data = json.load(open(args.beats_file))
     beats = data["beats"]
     sr = 24000
 
@@ -179,12 +197,12 @@ def main():
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     json.dump({"totalSeconds": round(total_dur, 3), "voice": args.voice, "speed": args.speed,
-               "beats": timing}, open(TIMING_OUT, "w"), indent=2)
+               "beats": timing}, open(args.timing_out, "w"), ensure_ascii=False, indent=2)
 
     mins = int(total_dur // 60)
     secs = total_dur - mins * 60
     print(f"\n✓ {args.out}")
-    print(f"✓ {TIMING_OUT}")
+    print(f"✓ {args.timing_out}")
     print(f"\nTotal runtime: {mins}m {secs:04.1f}s\n")
 
 
