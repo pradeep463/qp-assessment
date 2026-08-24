@@ -135,3 +135,16 @@ cloud-TTS (ElevenLabs/OpenAI) alternatives.
 
 To attach the voice: either mux onto the silent render with ffmpeg (fast, no
 re-render), or run `npm run render:crime:vo` to render with the `<Audio>` track.
+
+**Finalize with ambience + captions (offline, no re-render):**
+
+```bash
+npm run render:crime                                   # silent base (once)
+python3 scripts/generate_voiceover.py --voice am_onyx --speed 1.06
+npm run finalize:crime                                 # -> out/crime-psychology-vo.mp4
+```
+
+`scripts/mux_voiceover.sh` builds a subtle horror ambience bed (low drone +
+sub rumble + faint air, all synthesized in ffmpeg), sidechain-ducks it under
+the narration so the voice stays clear, burns in the synced captions, and muxes
+everything onto the silent render. Flags: `--no-bed`, `--no-captions`.

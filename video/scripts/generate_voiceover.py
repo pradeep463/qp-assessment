@@ -122,11 +122,14 @@ def main():
     subprocess.run(["ffmpeg", "-y", "-i", wav, "-codec:a", "libmp3lame", "-q:a", "3", args.out],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    srt = "\n".join(
-        f"{i+1}\n{srt_time(l['start'])} --> {srt_time((lines[i+1]['start'] if i+1 < len(lines) else total) - 0.05)}\n{l['text']}\n"
-        for i, l in enumerate(lines)
-    )
-    open(os.path.join(PUB, "captions.srt"), "w").write(srt)
+    # captions use the ACTUAL placed timings so they match the spoken audio
+    cues = []
+    for i, (start, samples) in enumerate(clips):
+        end = start + len(samples) / sr
+        if i + 1 < len(clips):
+            end = min(end, clips[i + 1][0] - 0.02)
+        cues.append(f"{i+1}\n{srt_time(start)} --> {srt_time(end)}\n{lines[i]['text']}\n")
+    open(os.path.join(PUB, "captions.srt"), "w").write("\n".join(cues))
 
     print(f"\n✓ {args.out}")
     print(f"✓ {os.path.join(PUB, 'captions.srt')}")
