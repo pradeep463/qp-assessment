@@ -132,11 +132,12 @@ long-form sourced documentary content).
 
 ## Upload checklist (non-metadata items that move views)
 
-- **Playlist:** create a "Case Files" playlist now and add this video as
-  episode 1, even with only one video in it. Playlists are the single
-  biggest lever for "session contribution" (the current top long-form
-  ranking signal) — a viewer who queues the next case file instead of
-  leaving YouTube is exactly what the algorithm rewards.
+- **Playlist:** create the channel-wide crime playlist now (name +
+  description below) and add this video as its first entry, even with only
+  one video in it. Playlists are the single biggest lever for "session
+  contribution" (the current top long-form ranking signal) — a viewer who
+  queues the next case file instead of leaving YouTube is exactly what the
+  algorithm rewards.
 - **End screen (last 5-20s):** subscribe button + this video's own
   thumbnail isn't useful yet with only one upload, so point the end
   screen's second slot at your **channel** element instead of a specific
@@ -162,6 +163,39 @@ long-form sourced documentary content).
   before "...more" in search and suggested-video panels — the description
   above already leads with the strongest hook line for exactly this reason;
   don't bury it under channel boilerplate.
+
+## Channel playlist (every crime video goes in this one)
+
+Playlists are their own indexed, searchable entity on YouTube — this one
+should hold every crime/true-crime/horror video on the channel going
+forward, not just the "Case File" episode series, so it's named broadly
+enough to cover future formats (shorter cases, deep dives, whatever comes
+next) while still carrying the channel's own search keywords.
+
+**Name:** `Case Files — True Crime, Cold Cases & Criminal History`
+(56 chars, well under YouTube's 150-char playlist title limit; leads with
+the channel's own recurring "Case File" branding, then stacks the three
+search terms most likely to bring in browse/search traffic.)
+
+**Description:**
+```
+Every case file from CipherStudios TC — real crimes, verified sources, told
+straight. From the oldest murder ever found to killers who operated in
+plain sight, each video is built from published research and primary
+sources, not legend or speculation. Disputed claims are labeled as
+disputed, always.
+
+This playlist centers the victims and the evidence, not the killer. New
+case files added regularly — subscribe to the channel to catch the next one
+as soon as it drops.
+
+#TrueCrime #CrimeHistory #ColdCase #CriminalHistory #CipherStudios
+```
+
+Add every future crime/horror upload to this playlist on publish, in
+release order — a viewer who autoplays into case 2 right after case 1 is
+exactly the "session contribution" signal from the research above, and it's
+free once the playlist exists.
 
 ## Pinned comment (fun fact, ties back to the episode)
 
