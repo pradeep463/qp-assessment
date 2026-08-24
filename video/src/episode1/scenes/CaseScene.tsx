@@ -22,11 +22,12 @@ export const CaseScene: React.FC<{
   Diagram: React.FC<DiagramProps>;
   fieldNotes: FieldNote[];
   beats: Beat[];
-}> = ({ caseId, Diagram, fieldNotes, beats }) => {
+  metaOverride?: { title: string; label: string };
+}> = ({ caseId, Diagram, fieldNotes, beats, metaOverride }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const f = (s: number) => Math.round(s * fps);
-  const meta = CASE_META[caseId];
+  const meta = metaOverride ?? CASE_META[caseId];
 
   const cardBeats = beats.filter((b) => b.card);
   let activeCard: string | null = null;

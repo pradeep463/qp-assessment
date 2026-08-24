@@ -11,7 +11,11 @@ const ICONS = [SkullIcon, IcemanIcon, TabletIcon, VialIcon, SickleIcon];
 // Fast slam-in cold open: five case icons snap onto the board, connected by
 // red string, then the title lands hard. Mirrors the punchy hook used on
 // the channel's first video (retention: land the promise in <1s).
-export const ColdOpen: React.FC<{ titleFrame: number }> = ({ titleFrame }) => {
+export const ColdOpen: React.FC<{
+  titleFrame: number;
+  caseFileLabel?: string;
+  title?: string;
+}> = ({ titleFrame, caseFileLabel = "Case File 001", title = "THE FIRST CRIMES" }) => {
   const frame = useCurrentFrame();
   const slam = interpolate(frame, [0, 14], [1.3, 1.0], {
     extrapolateLeft: "clamp",
@@ -52,10 +56,10 @@ export const ColdOpen: React.FC<{ titleFrame: number }> = ({ titleFrame }) => {
 
         <div style={{ position: "absolute", left: 0, right: 0, top: 460, textAlign: "center" }}>
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 30 }}>
-            <Stamp color={CC.red} rotate={-5} size={30}>Case File 001</Stamp>
+            <Stamp color={CC.red} rotate={-5} size={30}>{caseFileLabel}</Stamp>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Reveal text="THE FIRST CRIMES" delay={titleFrame} size={150} color={CC.bone} weight={800} font={CFONT.display} />
+            <Reveal text={title} delay={titleFrame} size={150} color={CC.bone} weight={800} font={CFONT.display} />
           </div>
           <div style={{ display: "flex", justifyContent: "center", marginTop: 20 }}>
             <Reveal text="CipherStudios" delay={titleFrame + 8} size={44} color={CC.red} font={CFONT.stamp} letterSpacing={4} />

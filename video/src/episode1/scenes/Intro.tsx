@@ -6,18 +6,24 @@ import { Reveal } from "../../crime/components/Text";
 import { SkullIcon, IcemanIcon, TabletIcon, VialIcon, SickleIcon } from "../icons";
 
 const ICONS = [SkullIcon, IcemanIcon, TabletIcon, VialIcon, SickleIcon];
-const LABELS = ["MURDER", "COLD CASE", "LAW", "SERIAL KILLER", "FORENSICS"];
+const DEFAULT_LABELS = ["MURDER", "COLD CASE", "LAW", "SERIAL KILLER", "FORENSICS"];
 
 // Sets up the promise of the episode: five firsts, previewed as a row of
 // case cards, then a short credibility beat ("sources, not legend").
-export const Intro: React.FC<{ cardFrame: number; welcomeFrame: number }> = ({ cardFrame, welcomeFrame }) => {
+export const Intro: React.FC<{
+  cardFrame: number;
+  welcomeFrame: number;
+  heading?: string;
+  labels?: string[];
+  sourcesNotLegend?: string;
+}> = ({ cardFrame, welcomeFrame, heading = "5 FIRSTS.", labels = DEFAULT_LABELS, sourcesNotLegend = "Sources, not legend" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", left: 0, right: 0, top: 90, textAlign: "center" }}>
-        <Reveal text="5 FIRSTS." size={100} color={CC.bone} font={CFONT.display} style={{ justifyContent: "center" }} />
+        <Reveal text={heading} size={100} color={CC.bone} font={CFONT.display} style={{ justifyContent: "center" }} />
       </div>
 
       <div style={{ position: "absolute", left: 0, right: 0, top: 280, display: "flex", justifyContent: "center", gap: 48 }}>
@@ -31,7 +37,7 @@ export const Intro: React.FC<{ cardFrame: number; welcomeFrame: number }> = ({ c
                 </AbsoluteFill>
               </TornCard>
               <div style={{ marginTop: 250, fontFamily: CFONT.stamp, fontSize: 20, color: CC.boneDim, letterSpacing: 2 }}>
-                {LABELS[i]}
+                {labels[i]}
               </div>
             </div>
           );
@@ -40,7 +46,7 @@ export const Intro: React.FC<{ cardFrame: number; welcomeFrame: number }> = ({ c
 
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 130, textAlign: "center" }}>
         <div style={{ opacity: interpolate(frame, [welcomeFrame, welcomeFrame + 15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
-          <Stamp color={CC.boneDim} rotate={-3} size={26}>Sources, not legend</Stamp>
+          <Stamp color={CC.boneDim} rotate={-3} size={26}>{sourcesNotLegend}</Stamp>
         </div>
       </div>
     </AbsoluteFill>

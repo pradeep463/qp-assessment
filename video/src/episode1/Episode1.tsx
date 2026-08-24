@@ -7,9 +7,11 @@ import { Intro } from "./scenes/Intro";
 import { CaseScene } from "./scenes/CaseScene";
 import { Transition } from "./scenes/Transition";
 import { Close } from "./scenes/Close";
-import { EVIDEO } from "./theme";
-import { CASE_DIAGRAMS, CASE_FIELD_NOTES } from "./diagrams/compose";
+import { EVIDEO, CASE_META_HI } from "./theme";
+import { CASE_DIAGRAMS, CASE_FIELD_NOTES, CASE_FIELD_NOTES_HI } from "./diagrams/compose";
+import { TRANSITION_HOOKS_HI, COLD_OPEN_TEXT_HI, INTRO_TEXT_HI, CLOSE_TEXT_HI } from "./text.hi";
 import timing from "./timing.json";
+import timingHi from "./timing.hi.json";
 
 // Short, non-verbatim teaser for the case a transition bridges into — the
 // narration itself carries the actual transition line, so this is a
@@ -39,9 +41,16 @@ function groupByCase(beats: TimingBeat[]) {
 export const TAIL_HOLD_SECONDS = 2.5;
 
 export const episode1DurationInFrames = toFrame((timing as any).totalSeconds + TAIL_HOLD_SECONDS);
+export const episode1HindiDurationInFrames = toFrame((timingHi as any).totalSeconds + TAIL_HOLD_SECONDS);
 
-export const Episode1: React.FC<{ voiceover?: boolean }> = ({ voiceover = true }) => {
-  const groups = groupByCase((timing as any).beats as TimingBeat[]);
+export const Episode1: React.FC<{ voiceover?: boolean; lang?: "en" | "hi" }> = ({ voiceover = true, lang = "en" }) => {
+  const isHi = lang === "hi";
+  const activeTiming = isHi ? timingHi : timing;
+  const groups = groupByCase((activeTiming as any).beats as TimingBeat[]);
+  const totalDurationInFrames = isHi ? episode1HindiDurationInFrames : episode1DurationInFrames;
+  const fieldNotes = isHi ? CASE_FIELD_NOTES_HI : CASE_FIELD_NOTES;
+  const transitionHooks = isHi ? TRANSITION_HOOKS_HI : TRANSITION_HOOKS;
+  const caseMeta = isHi ? CASE_META_HI : undefined;
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#0C0B09" }}>
@@ -50,29 +59,61 @@ export const Episode1: React.FC<{ voiceover?: boolean }> = ({ voiceover = true }
 
       {groups.map((g, gi) => {
         const startFrame = toFrame(g.beats[0].start);
-        const nextStartFrame = gi + 1 < groups.length ? toFrame(groups[gi + 1].beats[0].start) : episode1DurationInFrames;
+        const nextStartFrame = gi + 1 < groups.length ? toFrame(groups[gi + 1].beats[0].start) : totalDurationInFrames;
         const durationInFrames = Math.max(1, nextStartFrame - startFrame);
         const localBeats = g.beats.map((b) => ({ frame: toFrame(b.start) - startFrame, card: b.card }));
 
         let content: React.ReactNode;
         if (g.case === 0) {
-          content = <ColdOpen titleFrame={localBeats[2]?.frame ?? 0} />;
+          content = isHi ? (
+            <ColdOpen titleFrame={localBeats[2]?.frame ?? 0} caseFileLabel={COLD_OPEN_TEXT_HI.caseFileLabel} title={COLD_OPEN_TEXT_HI.title} />
+          ) : (
+            <ColdOpen titleFrame={localBeats[2]?.frame ?? 0} />
+          );
         } else if (g.case === 1) {
-          content = <Intro cardFrame={localBeats[1]?.frame ?? 0} welcomeFrame={localBeats[3]?.frame ?? localBeats[localBeats.length - 1].frame} />;
+          const cardFrame = localBeats[1]?.frame ?? 0;
+          const welcomeFrame = localBeats[3]?.frame ?? localBeats[localBeats.length - 1].frame;
+          content = isHi ? (
+            <Intro
+              cardFrame={cardFrame}
+              welcomeFrame={welcomeFrame}
+              heading={INTRO_TEXT_HI.heading}
+              labels={INTRO_TEXT_HI.labels}
+              sourcesNotLegend={INTRO_TEXT_HI.sourcesNotLegend}
+            />
+          ) : (
+            <Intro cardFrame={cardFrame} welcomeFrame={welcomeFrame} />
+          );
         } else if (g.case === 7) {
-          content = <Close beats={localBeats} />;
+          content = isHi ? (
+            <Close
+              beats={localBeats}
+              line1={CLOSE_TEXT_HI.line1}
+              line2={CLOSE_TEXT_HI.line2}
+              subscribeText={CLOSE_TEXT_HI.subscribe}
+              caseClosedText={CLOSE_TEXT_HI.caseClosed}
+            />
+          ) : (
+            <Close beats={localBeats} />
+          );
         } else if (g.case < 0) {
           const bridgeTo = g.beats[0].bridgeTo ?? -g.case;
           content = (
             <Transition
               NextIcon={CASE_ICONS[bridgeTo]}
               beatFrames={localBeats.map((b) => b.frame)}
-              hook={TRANSITION_HOOKS[bridgeTo]}
+              hook={transitionHooks[bridgeTo]}
             />
           );
         } else {
           content = (
-            <CaseScene caseId={g.case} Diagram={CASE_DIAGRAMS[g.case]} fieldNotes={CASE_FIELD_NOTES[g.case]} beats={localBeats} />
+            <CaseScene
+              caseId={g.case}
+              Diagram={CASE_DIAGRAMS[g.case]}
+              fieldNotes={fieldNotes[g.case]}
+              beats={localBeats}
+              metaOverride={caseMeta?.[g.case]}
+            />
           );
         }
 
@@ -84,7 +125,7 @@ export const Episode1: React.FC<{ voiceover?: boolean }> = ({ voiceover = true }
       })}
 
       <Grain />
-      {voiceover && <Audio src={staticFile("episode1-voiceover.mp3")} />}
+      {voiceover && <Audio src={staticFile(isHi ? "episode1-voiceover-hi.mp3" : "episode1-voiceover.mp3")} />}
     </AbsoluteFill>
   );
 };

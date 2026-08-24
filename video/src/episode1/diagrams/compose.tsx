@@ -213,3 +213,46 @@ export const CASE_FIELD_NOTES: Record<number, { at: number; text: string }[]> = 
     { at: 60.5, text: "No torture. No witness. Just a detail he missed." },
   ],
 };
+
+// Hindi field notes — same case-relative timings as the English set (a
+// small, deliberate simplification: Hindi narration runs longer per case,
+// so these drift a little relative to the actual Hindi beat timestamps,
+// but the fact-tag cards and case/transition durations that matter most for
+// audio sync are driven directly from timing.hi.json, not from these).
+export const CASE_FIELD_NOTES_HI: Record<number, { at: number; text: string }[]> = {
+  2: [
+    { at: 1.5, text: "सदियों से बंद एक गड्ढा।" },
+    { at: 13.0, text: "हज़ारों सालों की कब्रें, एक ही गड्ढे में।" },
+    { at: 26.0, text: "एक खोपड़ी, बावन टुकड़ों से जोड़ी गई।" },
+    { at: 34.5, text: "दो वार। एक ही चीज़, दो बार।" },
+    { at: 52.0, text: "फोरेंसिक अंदाज़ा नहीं लगाता। नापता है।" },
+    { at: 63.0, text: "हमारी अपनी प्रजाति से भी पुराना।" },
+    { at: 88.0, text: "हर विशेषज्ञ सहमत नहीं। यही ईमानदार सच है।" },
+  ],
+  3: [
+    { at: 1.5, text: "बर्फ़ ने उसे किसी मुर्दाघर से बेहतर सुरक्षित रखा।" },
+    { at: 9.0, text: "त्वचा, अंग, यहाँ तक कि आखिरी भोजन भी।" },
+    { at: 29.5, text: "एक्स-रे ने वह पाया, जो पोस्टमार्टम से छूट गया।" },
+    { at: 39.5, text: "एक तीर। कोई चेतावनी नहीं।" },
+    { at: 59.5, text: "उसका हाथ, कुछ दिन पहले की कहानी बताता है।" },
+    { at: 78.5, text: "पूरी फ़ाइल। ज्ञात हथियार। कोई संदिग्ध नहीं।" },
+  ],
+  4: [
+    { at: 1.0, text: "लिखा गया, ताकि कोई नियम पर बहस न कर सके।" },
+    { at: 23.0, text: "हर गलती जान लेने लायक नहीं थी।" },
+    { at: 35.0, text: "पर कुछ थीं, और संहिता ने साफ़ कहा।" },
+    { at: 54.0, text: "पहली बार, समाज ने अपराध को पहले से परिभाषित किया।" },
+  ],
+  5: [
+    { at: 1.0, text: "उसे पता था, कितना ज़्यादा है।" },
+    { at: 18.0, text: "पहली खुराक ने उसे कुछ सिखाया। उसने इस्तेमाल किया।" },
+    { at: 47.0, text: "साम्राज्य की सबसे सुरक्षित हत्यारी, एक क्लासरूम चलाती थी।" },
+    { at: 66.5, text: "दोहराया गया तरीका। कई पीड़ित। कोई अदालत नहीं।" },
+  ],
+  6: [
+    { at: 1.0, text: "क्राइम लैब से सात सदियों पहले, एक कोरोनर ने किताब लिखी।" },
+    { at: 25.0, text: "हर ब्लेड एक जैसा दिखता था। वह जानता था, एक अलग है।" },
+    { at: 45.5, text: "जो कपड़ा पोंछकर साफ़ कर दे, मक्खी फिर भी सूंघ लेती है।" },
+    { at: 60.5, text: "कोई यातना नहीं। कोई गवाह नहीं। बस एक चूक, जो उससे छूट गई।" },
+  ],
+};

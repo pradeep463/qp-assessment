@@ -2,7 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { AiExplainer } from "./AiExplainer";
 import { CrimePsych } from "./crime/CrimePsych";
-import { Episode1, episode1DurationInFrames } from "./episode1/Episode1";
+import { Episode1, episode1DurationInFrames, episode1HindiDurationInFrames } from "./episode1/Episode1";
 import { WelcomeBumper } from "./episode1/scenes/WelcomeBumper";
 import { Outro } from "./episode1/scenes/Outro";
 import { Thumbnail } from "./episode1/Thumbnail";
@@ -38,7 +38,16 @@ export const RemotionRoot: React.FC = () => (
       fps={EVIDEO.fps}
       width={EVIDEO.width}
       height={EVIDEO.height}
-      defaultProps={{ voiceover: true }}
+      defaultProps={{ voiceover: true, lang: "en" }}
+    />
+    <Composition
+      id="Episode1Hindi"
+      component={Episode1}
+      durationInFrames={episode1HindiDurationInFrames}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
+      defaultProps={{ voiceover: true, lang: "hi" }}
     />
     <Composition
       id="WelcomeBumper"

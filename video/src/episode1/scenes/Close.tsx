@@ -13,7 +13,19 @@ type Beat = { frame: number; card: string | null };
 // and the closing stamp. The last two beats (subscribe / case closed) get
 // their own dedicated stamps rather than the generic fact-tag, so nothing
 // doubles up on screen.
-export const Close: React.FC<{ beats: Beat[] }> = ({ beats }) => {
+export const Close: React.FC<{
+  beats: Beat[];
+  line1?: string;
+  line2?: string;
+  subscribeText?: string;
+  caseClosedText?: string;
+}> = ({
+  beats,
+  line1 = "FOUR HUNDRED THIRTY THOUSAND YEARS.",
+  line2 = "ONE STRAIGHT LINE.",
+  subscribeText = "Subscribe — CipherStudios",
+  caseClosedText = "CASE CLOSED",
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const cardBeats = beats.filter((b) => b.card);
@@ -38,9 +50,9 @@ export const Close: React.FC<{ beats: Beat[] }> = ({ beats }) => {
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", left: 0, right: 0, top: 80, textAlign: "center" }}>
-        <Reveal text="FOUR HUNDRED THIRTY THOUSAND YEARS." size={50} color={CC.bone} font={CFONT.display} style={{ justifyContent: "center" }} />
+        <Reveal text={line1} size={50} color={CC.bone} font={CFONT.display} style={{ justifyContent: "center" }} />
         <div style={{ marginTop: 10 }}>
-          <Reveal text="ONE STRAIGHT LINE." delay={10} size={50} color={CC.red} font={CFONT.display} style={{ justifyContent: "center" }} />
+          <Reveal text={line2} delay={10} size={50} color={CC.red} font={CFONT.display} style={{ justifyContent: "center" }} />
         </div>
       </div>
 
@@ -91,7 +103,7 @@ export const Close: React.FC<{ beats: Beat[] }> = ({ beats }) => {
             transform: `scale(${interpolate(subscribeIn, [0, 1], [0.85, 1])})`,
           }}
         >
-          <Stamp color={CC.bone} rotate={-3} size={28}>Subscribe — CipherStudios</Stamp>
+          <Stamp color={CC.bone} rotate={-3} size={28}>{subscribeText}</Stamp>
         </div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, top: 975, textAlign: "center" }}>
@@ -115,7 +127,7 @@ export const Close: React.FC<{ beats: Beat[] }> = ({ beats }) => {
               borderRadius: 6,
             }}
           >
-            CASE CLOSED
+            {caseClosedText}
           </div>
         </div>
       </div>
