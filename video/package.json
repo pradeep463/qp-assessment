@@ -7,8 +7,9 @@
     "dev": "remotion studio",
     "render": "remotion render src/index.ts AiExplainer out/ai-explainer.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
     "render:crime": "remotion render src/index.ts CrimePsych out/crime-psychology.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
-    "render:crime:vo": "remotion render src/index.ts CrimePsych out/crime-psychology-vo.mp4 --props={\"voiceover\":true,\"captions\":true} --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
-    "voiceover": "node scripts/generate-voiceover.mjs",
+    "render:crime:vo": "remotion render src/index.ts CrimePsych out/crime-psychology-vo.mp4 --props={\"voiceover\":true} --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+    "voiceover:local": "python3 scripts/generate_voiceover.py",
+    "voiceover:cloud": "node scripts/generate-voiceover.mjs",
     "still": "remotion still src/index.ts AiExplainer out/still.png --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
     "upgrade": "remotion upgrade"
   },
@@ -21,6 +22,8 @@
   },
   "devDependencies": {
     "@types/react": "19.0.0",
+    "kokoro-fp16-shards": "^1.0.4",
+    "kokoro-js": "^1.2.1",
     "typescript": "5.4.5"
   }
 }

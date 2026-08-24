@@ -3,30 +3,38 @@
 Remotion serves this folder via `staticFile()`. The narrated render looks for
 **`public/voiceover.mp3`** here.
 
-## Two ways to get the voice
+## Option 1 — Local neural voice (works offline, recommended)
 
-### A) A real human voice (truly not-AI)
-1. Open `../src/crime/voscript.json` — it lists every line and the second it
-   should start.
-2. Record the lines (yourself, or a hired voice actor — e.g. Fiverr/Voice123),
-   timed to those `start` marks.
-3. Export the mix as `voiceover.mp3` into this folder.
-
-### B) Near-human AI voice (fast)
-On a machine with internet + an API key (this sandbox blocks the providers):
+Kokoro-82M runs 100% locally — no cloud, no API key. Model weights come from
+the npm package `kokoro-fp16-shards`, voices from `kokoro-js`, and phonemization
+from the pip wheel `espeakng-loader`. It's a real neural voice, not robotic.
 
 ```bash
-# most human-like (recommended)
-ELEVENLABS_API_KEY=sk_...  npm run voiceover
-# or
-VOICE_PROVIDER=openai OPENAI_API_KEY=sk_...  npm run voiceover
+pip install kokoro-onnx soundfile
+npm install                                   # brings the model + voices
+python3 scripts/generate_voiceover.py --voice am_onyx --speed 0.95
 ```
 
-That writes `voiceover.mp3` (timed to the script) and `captions.srt` here.
+Voices: `am_onyx` `am_michael` `am_adam` (US male) · `bm_george` `bm_lewis`
+(UK male) · `bf_emma` `bf_alice` (UK female) · `af_sarah` `af_nicole` (US female).
+
+## Option 2 — A real human recording (truly not-AI)
+
+1. Open `../src/crime/voscript.json` — every line + the second it starts.
+2. Record them (yourself, or a voice actor — Fiverr/Voice123), timed to those marks.
+3. Export the mix as `voiceover.mp3` into this folder.
+
+## Option 3 — Cloud TTS (ElevenLabs / OpenAI)
+
+On a machine with internet + an API key:
+
+```bash
+ELEVENLABS_API_KEY=sk_...  npm run voiceover:cloud
+```
 
 ## Then render with narration + captions
 ```bash
-npm run render:crime:vo   # -> out/crime-psychology-vo.mp4
+npm run render:crime:vo     # -> out/crime-psychology-vo.mp4
 ```
 
-The plain `npm run render:crime` stays silent (no audio file needed).
+Plain `npm run render:crime` stays silent (no audio file needed).

@@ -110,3 +110,28 @@ close that loops back to the opening question).
 | 16–20.5s  | The audience    | 44% vs 23% — women & true crime (Pew, 2023)             |
 | 20.5–26s  | The craft       | suspense > surprise · sound · open/close loops          |
 | 26–30s    | Ethics + close  | "Center the victim, not the killer." → *Case Closed*    |
+
+### Voiceover (offline neural voice — no cloud, no API key)
+
+The narration in `out/crime-psychology-vo.mp4` is generated **entirely locally**
+with **Kokoro-82M**, a high-quality neural TTS (not robotic espeak):
+
+- model weights ship in the npm package `kokoro-fp16-shards` (10 shards → one `.onnx`)
+- voice styles ship in `kokoro-js` (`voices/*.bin`)
+- phonemization uses espeak-ng bundled inside the pip wheel `espeakng-loader`
+
+Nothing is downloaded from HuggingFace or a TTS provider, so it runs anywhere.
+
+```bash
+pip install kokoro-onnx soundfile
+python3 scripts/generate_voiceover.py --voice am_onyx --speed 1.06
+```
+
+`src/crime/voscript.json` is the single source of truth for the narration and
+timing (lines are placed sequentially so they never overlap). Voices include
+`am_onyx` `am_michael` (US male), `bm_george` (UK male), `bf_emma` (UK female),
+`af_sarah` (US female). See `public/README.md` for the human-recording and
+cloud-TTS (ElevenLabs/OpenAI) alternatives.
+
+To attach the voice: either mux onto the silent render with ffmpeg (fast, no
+re-render), or run `npm run render:crime:vo` to render with the `<Audio>` track.
