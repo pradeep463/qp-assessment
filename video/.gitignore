@@ -3,6 +3,7 @@ node_modules
 out/*.png
 out/samples
 out/*.wav
+out/voice_samples
 # intermediate render artifacts — only the final muxed out/episode1.mp4 ships
 out/episode1-main.mp4
 out/welcome.mp4
