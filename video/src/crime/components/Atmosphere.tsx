@@ -44,6 +44,18 @@ export const Board: React.FC = () => (
   </AbsoluteFill>
 );
 
+// Quick pattern-interrupt flashes at scene cuts — a jolt that re-grabs the
+// eye every few seconds (the doc's "re-hook"), driven by absolute frame.
+export const Flashes: React.FC<{ at: number[]; color?: string; peak?: number }> = ({ at, color = "#EDE7D5", peak = 0.22 }) => {
+  const frame = useCurrentFrame();
+  let op = 0;
+  for (const f of at) {
+    op = Math.max(op, interpolate(frame, [f - 2, f, f + 4], [0, peak, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
+  }
+  if (op <= 0.001) return null;
+  return <AbsoluteFill style={{ background: color, opacity: op, pointerEvents: "none" }} />;
+};
+
 // Film grain + subtle bulb flicker, laid over everything for unease.
 export const Grain: React.FC = () => {
   const frame = useCurrentFrame();

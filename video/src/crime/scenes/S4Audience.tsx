@@ -8,7 +8,7 @@ import { SceneWrap } from "../components/SceneKit";
 const Stat: React.FC<{ target: number; label: string; delay: number; color: string; h: number }> = ({ target, label, delay, color, h }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const p = spring({ frame: frame - delay, fps, config: { damping: 18, mass: 0.9 } });
+  const p = spring({ frame: frame - delay, fps, config: { damping: 12, mass: 0.6, stiffness: 140 } });
   const val = Math.round(interpolate(p, [0, 1], [0, target]));
   const barH = interpolate(p, [0, 1], [0, h]);
   return (

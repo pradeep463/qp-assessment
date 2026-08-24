@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
-import { CaseDefs, Board, Grain } from "./components/Atmosphere";
+import { CaseDefs, Board, Grain, Flashes } from "./components/Atmosphere";
 import { Voiceover, Captions } from "./components/Narration";
 import { S1Hook } from "./scenes/S1Hook";
 import { S2Curiosity } from "./scenes/S2Curiosity";
@@ -35,6 +35,7 @@ export const CrimePsych: React.FC<{ voiceover?: boolean; captions?: boolean }> =
         </Sequence>
       );
     })}
+    <Flashes at={SCENES.slice(1).map((s) => s.from + 8)} />
     <Grain />
     {captions && <Captions />}
     {voiceover && <Voiceover />}

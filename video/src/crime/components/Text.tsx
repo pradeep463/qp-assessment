@@ -47,9 +47,9 @@ export const Reveal: React.FC<{
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: `0 ${size * 0.26}px`, fontFamily: font, fontSize: size, fontWeight: weight, color, lineHeight, letterSpacing, ...style }}>
       {words.map((w, i) => {
-        const s = spring({ frame: frame - delay - i * 3, fps, config: { damping: 18, mass: 0.6, stiffness: 120 } });
+        const s = spring({ frame: frame - delay - i * 2, fps, config: { damping: 200, mass: 0.5, stiffness: 320 } });
         return (
-          <span key={i} style={{ display: "inline-block", transform: `translateY(${interpolate(s, [0, 1], [size * 0.5, 0])}px)`, opacity: s, filter: `blur(${interpolate(s, [0, 1], [6, 0])}px)` }}>
+          <span key={i} style={{ display: "inline-block", transform: `translateY(${interpolate(s, [0, 1], [size * 0.32, 0])}px)`, opacity: interpolate(s, [0, 0.6], [0, 1], { extrapolateRight: "clamp" }) }}>
             {w}
           </span>
         );

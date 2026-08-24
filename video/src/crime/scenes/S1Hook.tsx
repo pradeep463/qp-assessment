@@ -7,7 +7,7 @@ import { SceneWrap } from "../components/SceneKit";
 
 // S1 — the hook. Evidence board assembles; open the loop in the first seconds.
 export const S1Hook: React.FC = () => (
-  <SceneWrap zoomFrom={1.12} zoomTo={1.0} panY={10}>
+  <SceneWrap punch fin={3}>
     <AbsoluteFill>
       {/* pinned evidence around the edges */}
       <RedString x1={360} y1={300} x2={760} y2={430} sag={40} />
@@ -38,12 +38,12 @@ export const S1Hook: React.FC = () => (
       <div style={{ position: "absolute", left: 300, top: 640, width: 1340 }}>
         <div style={{ marginBottom: 22, display: "flex", gap: 20, alignItems: "center" }}>
           <Stamp color={CC.red} rotate={-6}>Case File</Stamp>
-          <Typewriter text="> why can't you look away?" startAt={12} size={30} color={CC.redBright} />
+          <Typewriter text="> why can't you look away?" startAt={4} cps={34} size={30} color={CC.redBright} />
         </div>
-        <Reveal text="WHY WE CAN'T" delay={22} size={130} color={CC.bone} weight={700} letterSpacing={-1} />
-        <Reveal text="LOOK AWAY" delay={30} size={130} color={CC.red} weight={700} letterSpacing={-1} />
+        <Reveal text="WHY WE CAN'T" delay={5} size={130} color={CC.bone} weight={700} letterSpacing={-1} />
+        <Reveal text="LOOK AWAY" delay={10} size={130} color={CC.red} weight={700} letterSpacing={-1} />
         <div style={{ marginTop: 20 }}>
-          <Reveal text="The psychology of crime & horror." delay={44} size={40} color={CC.boneDim} font={CFONT.display} style={{ fontStyle: "italic" }} />
+          <Reveal text="The psychology of crime & horror." delay={22} size={40} color={CC.boneDim} font={CFONT.display} style={{ fontStyle: "italic" }} />
         </div>
       </div>
     </AbsoluteFill>
