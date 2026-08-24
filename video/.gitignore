@@ -7,6 +7,8 @@ out/voice_samples
 out/voice_samples_kn
 # intermediate render artifacts — only the final muxed out/episode1.mp4 ships
 out/episode1-main.mp4
+out/episode1-hindi-main.mp4
+out/episode1-hindi-720p.mp4
 out/welcome.mp4
 out/outro.mp4
 out/episode1-720p.mp4
