@@ -1,0 +1,18 @@
+{
+  "comment": "Narration for the welcome bumper (prepended) and outro (appended) around the main episode. Generated separately from the main episode audio so adding these never requires re-rendering the 15,000-frame main video.",
+  "welcome": {
+    "total": 4.5,
+    "lines": [
+      { "start": 0.3, "text": "Welcome to CipherStudios." }
+    ]
+  },
+  "outro": {
+    "total": 20,
+    "lines": [
+      { "start": 0.4, "text": "Thanks for watching." },
+      { "start": 2.0, "text": "If this one kept you hooked, hit like, subscribe, and share it with someone who loves a good mystery." },
+      { "start": 8.5, "text": "New case files drop every week, right here on CipherStudios." },
+      { "start": 12.5, "text": "See you in the next one." }
+    ]
+  }
+}

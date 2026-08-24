@@ -1,13 +1,14 @@
 # Remotion Explainer Videos
 
-Two programmatically-generated explainer videos built with
-[Remotion](https://www.remotion.dev/). Both recreate a distinct collage
-aesthetic procedurally (SVG + CSS) — no stock footage required.
+Programmatically-generated videos built with [Remotion](https://www.remotion.dev/).
+All recreate a distinct visual style procedurally (SVG + CSS) — no stock
+footage required.
 
 | Composition   | Length | Style                                          | Output                        |
 | ------------- | ------ | ---------------------------------------------- | ----------------------------- |
 | `AiExplainer` | 10s    | Bright mixed-media torn-paper collage          | `out/ai-explainer.mp4`        |
 | `CrimePsych`  | 30s    | Dark case-file / evidence-board (crime & horror) | `out/crime-psychology.mp4`    |
+| `Episode1`    | ~11min | CipherStudios TC — full documentary episode    | `out/episode1.mp4`            |
 
 ---
 
@@ -148,3 +149,59 @@ npm run finalize:crime                                 # -> out/crime-psychology
 sub rumble + faint air, all synthesized in ffmpeg), sidechain-ducks it under
 the narration so the voice stays clear, burns in the synced captions, and muxes
 everything onto the silent render. Flags: `--no-bed`, `--no-captions`.
+
+---
+
+## 3. CipherStudios TC — Episode 1: "The First Crimes" (~11min)
+
+The channel's first upload — a full documentary episode in the case-file
+aesthetic, built the same offline way as everything above: no cloud TTS, no
+stock footage, no captions (narration only).
+
+**Structure:** `src/episode1/beats.json` holds ~70 narration beats (each
+tagged with which "case" it belongs to and an optional short on-screen fact
+tag). `scripts/generate_episode.py` synthesizes every beat with Kokoro-82M,
+places them sequentially, and writes `src/episode1/timing.json` — the
+*actual* synthesized start/end per beat. `Episode1.tsx` imports that JSON
+directly and builds Remotion `<Sequence>`s from it, so every fact-tag pops
+in exactly when the narration reaches it — no manual timing, no drift.
+
+```bash
+python3 scripts/generate_episode.py --voice am_onyx --speed 1.0
+npm run render:episode1        # -> out/episode1-main.mp4 (silent-free, ~11min)
+```
+
+**Welcome bumper + outro** are separate short compositions
+(`WelcomeBumper.tsx`, `Outro.tsx`) with their own tiny narration
+(`bookends.json` → `scripts/generate_bookends.py` → `bookends-timing.json`).
+Keeping them separate means adding/editing the intro or outro never requires
+re-rendering the ~15,000-frame main episode — just re-render the short clip
+and re-concat:
+
+```bash
+python3 scripts/generate_bookends.py --voice am_onyx
+npx remotion render src/index.ts WelcomeBumper out/welcome.mp4
+npx remotion render src/index.ts Outro out/outro.mp4
+ffmpeg -i out/welcome.mp4 -i out/episode1-main.mp4 -i out/outro.mp4 \
+  -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0][2:v:0][2:a:0]concat=n=3:v=1:a=1[v][a]" \
+  -map "[v]" -map "[a]" -c:v libx264 -crf 24 -pix_fmt yuv420p -c:a aac out/episode1.mp4
+```
+
+**Thumbnail:** `npx remotion still src/index.ts Thumbnail out/thumbnail.png`
+— a 1280×720 still composition (`Thumbnail.tsx`) built from the same
+case-file components.
+
+**Upload metadata:** `scripts/episode1-metadata.md` has title options, a
+full description with chapter timestamps and sources, tags, category, and a
+pinned-comment fun fact — ready to paste into YouTube Studio.
+
+**Performance note:** a continuous `transform: scale(...)` on a large scene
+tree is expensive to recomposite every frame in this software-rendered (no
+GPU) environment — regardless of whether the value animates or is merely
+non-1. That mistake alone turned an ~11-minute video into a projected
+2h20m render; removing it (motion instead comes from periodic flash
+"re-hooks" and fact-tags popping in on beat) plus baking the film-grain/
+paper-fiber `feTurbulence` filters to static `public/tex-*.png` textures
+(they were being recomputed identically every single frame) brought it back
+to ~60 minutes at 24fps. If a new long-form scene feels slow to render,
+check for exactly this pattern first.

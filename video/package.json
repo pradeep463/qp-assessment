@@ -12,7 +12,10 @@
     "voiceover:cloud": "node scripts/generate-voiceover.mjs",
     "still": "remotion still src/index.ts AiExplainer out/still.png --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
     "upgrade": "remotion upgrade",
-    "finalize:crime": "bash scripts/mux_voiceover.sh"
+    "finalize:crime": "bash scripts/mux_voiceover.sh",
+    "render:episode1": "remotion render src/index.ts Episode1 out/episode1-main.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell --concurrency=4",
+    "render:episode1:bumpers": "remotion render src/index.ts WelcomeBumper out/welcome.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell && remotion render src/index.ts Outro out/outro.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
+    "still:thumbnail": "remotion still src/index.ts Thumbnail out/thumbnail.png --browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell"
   },
   "dependencies": {
     "@remotion/cli": "4.0.516",
