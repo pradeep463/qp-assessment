@@ -118,6 +118,60 @@ export const SkullWoundDiagram: React.FC<{ width: number; wound1At: number; woun
   );
 };
 
+// ---- A number ticking up to a target, with a label, followed by a second
+// line fading in a beat later — used for "430,000 years old" resolving into
+// "Homo heidelbergensis," two facts in one continuous beat.
+export const YearCounter: React.FC<{
+  width: number;
+  height: number;
+  appearAt: number;
+  target: number;
+  countLabel: string;
+  subAt: number;
+  subLabel: string;
+}> = ({ width, height, appearAt, target, countLabel, subAt, subLabel }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const s = spring({ frame: frame - appearAt, fps, config: { damping: 18, mass: 0.7 } });
+  const val = Math.round(interpolate(s, [0, 1], [0, target]));
+  const subS = spring({ frame: frame - subAt, fps, config: { damping: 16, mass: 0.6 } });
+  return (
+    <svg width={width} height={height} style={{ overflow: "visible" }}>
+      <g opacity={s}>
+        <text x={width * 0.5} y={height * 0.38} textAnchor="middle" fill={CC.red} fontFamily={CFONT.heavy} fontSize={52} fontWeight={900}>
+          {val.toLocaleString()}
+        </text>
+        <text x={width * 0.5} y={height * 0.52} textAnchor="middle" fill={CC.ink} fontFamily={CFONT.stamp} fontSize={20} fontWeight={700} letterSpacing={2}>
+          {countLabel}
+        </text>
+      </g>
+      <g opacity={subS} transform={`translateY(${interpolate(subS, [0, 1], [16, 0])})`}>
+        <text x={width * 0.5} y={height * 0.72} textAnchor="middle" fill={CC.boneDim} fontFamily={CFONT.display} fontSize={26} fontStyle="italic">
+          {subLabel}
+        </text>
+      </g>
+    </svg>
+  );
+};
+
+// ---- A wavering question mark — visualizes "disputed," where researchers
+// don't all agree on the cause of the injuries or the pit itself.
+export const DisputedMark: React.FC<{ width: number; height: number; appearAt: number }> = ({ width, height, appearAt }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const s = spring({ frame: frame - appearAt, fps, config: { damping: 14, mass: 0.6 } });
+  const wobble = 4 * Math.sin(frame * 0.12);
+  return (
+    <svg width={width} height={height} style={{ overflow: "visible" }}>
+      <g opacity={s} transform={`translate(0 ${wobble})`}>
+        <text x={width * 0.5} y={height * 0.55} textAnchor="middle" fill={CC.amber} fontFamily={CFONT.heavy} fontSize={90} fontWeight={900}>
+          ?
+        </text>
+      </g>
+    </svg>
+  );
+};
+
 // ---- Side-by-side "accident vs intentional" comparison, resolving to
 // highlight the correct one. Visualizes the forensic reasoning instead of
 // only stating it in narration.

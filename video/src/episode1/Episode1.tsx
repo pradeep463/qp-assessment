@@ -8,7 +8,18 @@ import { CaseScene } from "./scenes/CaseScene";
 import { Transition } from "./scenes/Transition";
 import { Close } from "./scenes/Close";
 import { EVIDEO } from "./theme";
+import { CASE_DIAGRAMS, CASE_FIELD_NOTES } from "./diagrams/compose";
 import timing from "./timing.json";
+
+// Short, non-verbatim teaser for the case a transition bridges into — the
+// narration itself carries the actual transition line, so this is a
+// distinct 2-4 word cue (Signaling, not a caption of the audio).
+const TRANSITION_HOOKS: Record<number, string> = {
+  3: "A VICTIM WITH A FACE",
+  4: "THE FIRST WRITTEN LAW",
+  5: "ROME'S SERIAL POISONER",
+  6: "A FLY BREAKS THE CASE",
+};
 
 const FPS = EVIDEO.fps;
 const toFrame = (s: number) => Math.round(s * FPS);
@@ -52,10 +63,17 @@ export const Episode1: React.FC<{ voiceover?: boolean }> = ({ voiceover = true }
           content = <Close beats={localBeats} />;
         } else if (g.case < 0) {
           const bridgeTo = g.beats[0].bridgeTo ?? -g.case;
-          content = <Transition NextIcon={CASE_ICONS[bridgeTo]} beatFrames={localBeats.map((b) => b.frame)} />;
+          content = (
+            <Transition
+              NextIcon={CASE_ICONS[bridgeTo]}
+              beatFrames={localBeats.map((b) => b.frame)}
+              hook={TRANSITION_HOOKS[bridgeTo]}
+            />
+          );
         } else {
-          const Icon = CASE_ICONS[g.case];
-          content = <CaseScene caseId={g.case} Icon={Icon} beats={localBeats} />;
+          content = (
+            <CaseScene caseId={g.case} Diagram={CASE_DIAGRAMS[g.case]} fieldNotes={CASE_FIELD_NOTES[g.case]} beats={localBeats} />
+          );
         }
 
         return (
