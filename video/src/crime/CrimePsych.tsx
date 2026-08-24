@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Sequence } from "remotion";
 import { CaseDefs, Board, Grain } from "./components/Atmosphere";
+import { Voiceover, Captions } from "./components/Narration";
 import { S1Hook } from "./scenes/S1Hook";
 import { S2Curiosity } from "./scenes/S2Curiosity";
 import { S3Paradox } from "./scenes/S3Paradox";
@@ -19,7 +20,10 @@ const SCENES = [
   { comp: S6Ethics, from: 780, dur: 120 },
 ];
 
-export const CrimePsych: React.FC = () => (
+export const CrimePsych: React.FC<{ voiceover?: boolean; captions?: boolean }> = ({
+  voiceover = false,
+  captions = false,
+}) => (
   <AbsoluteFill style={{ backgroundColor: "#0C0B09" }}>
     <CaseDefs />
     <Board />
@@ -32,5 +36,7 @@ export const CrimePsych: React.FC = () => (
       );
     })}
     <Grain />
+    {captions && <Captions />}
+    {voiceover && <Voiceover />}
   </AbsoluteFill>
 );

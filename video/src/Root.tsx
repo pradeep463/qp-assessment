@@ -22,6 +22,7 @@ export const RemotionRoot: React.FC = () => (
       fps={CVIDEO.fps}
       width={CVIDEO.width}
       height={CVIDEO.height}
+      defaultProps={{ voiceover: false, captions: false }}
     />
   </>
 );

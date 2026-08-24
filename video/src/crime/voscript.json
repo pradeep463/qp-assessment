@@ -1,0 +1,23 @@
+{
+  "comment": "Timed voiceover script for the CrimePsych (30s @ 30fps) video. `start` is in seconds and is aligned to the scene timeline. This one file drives (a) the optional generated voiceover track and (b) the optional burned-in captions, so audio and captions always stay in sync.",
+  "voice": {
+    "recommended": "calm, measured, low-timbre true-crime narrator; unhurried; pause before reveals",
+    "elevenlabs_voice_suggestions": ["Adam", "Charlotte", "Daniel", "Alice"],
+    "openai_voice_suggestions": ["onyx", "sage", "ash"]
+  },
+  "total": 30,
+  "lines": [
+    { "start": 0.6, "text": "Why can't you look away?" },
+    { "start": 2.7, "text": "It's the psychology of crime and horror." },
+    { "start": 5.4, "text": "Morbid curiosity isn't a flaw. It's an adaptation." },
+    { "start": 8.3, "text": "Your brain, rehearsing danger from the safety of your couch." },
+    { "start": 10.7, "text": "Fear becomes a thrill through a paradox." },
+    { "start": 12.8, "text": "The alarm fires, the mind says you're safe, and dread turns into a high." },
+    { "start": 16.4, "text": "And the core audience? Women. Nearly twice as often as men." },
+    { "start": 19.1, "text": "Not morbid. Learning to survive." },
+    { "start": 20.9, "text": "The craft is simple. Suspense over surprise." },
+    { "start": 23.1, "text": "Sound scares more than the image. Open a loop, then close it." },
+    { "start": 26.3, "text": "But one rule holds above all. Center the victim, not the killer." },
+    { "start": 28.7, "text": "Because the ethical path is the one that lasts." }
+  ]
+}

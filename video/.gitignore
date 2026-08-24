@@ -1,3 +1,6 @@
 node_modules
 .remotion
 out/*.png
+.vo-tmp
+public/voiceover.mp3
+public/captions.srt
