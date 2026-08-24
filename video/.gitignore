@@ -4,6 +4,7 @@ out/*.png
 out/samples
 out/*.wav
 out/voice_samples
+out/voice_samples_kn
 # intermediate render artifacts — only the final muxed out/episode1.mp4 ships
 out/episode1-main.mp4
 out/welcome.mp4
