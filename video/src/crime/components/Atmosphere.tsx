@@ -56,14 +56,35 @@ export const Flashes: React.FC<{ at: number[]; color?: string; peak?: number }> 
 // Film grain + subtle bulb flicker, laid over everything for unease.
 export const Grain: React.FC = () => {
   const frame = useCurrentFrame();
-  // flicker: mostly ~1, occasional dips
-  const flick =
-    0.9 + 0.1 * Math.sin(frame * 0.7) - (random(`f${Math.floor(frame / 2)}`) > 0.94 ? 0.14 : 0);
+  // Old-CRT-style flicker: a slow ambient "breathe" (multi-second period,
+  // low amplitude) plus a rare, brief bulb-glitch every few seconds that
+  // ramps smoothly rather than snapping — not the fast strobe a per-2-frame
+  // random check produces.
+  const breathe = 0.05 + 0.035 * Math.sin(frame * 0.045) + 0.02 * Math.sin(frame * 0.011 + 2);
+  const glitchSeed = Math.floor(frame / 70);
+  const glitchRoll = random(`glitch${glitchSeed}`);
+  const glitchLocal = frame % 70;
+  const glitchWindow = glitchRoll > 0.82 ? interpolate(glitchLocal, [0, 3, 7], [0, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+  const darkness = Math.min(0.22, breathe + glitchWindow * 0.14);
+
+  // a faint horizontal band that rolls slowly down the frame, like an old
+  // set's vertical-hold drifting — very subtle, never fully opaque
+  const rollY = ((frame * 1.6) % 1200) - 100;
+
   return (
     <>
       <AbsoluteFill
         style={{
-          background: `rgba(10,8,6,${interpolate(flick, [0.7, 1], [0.28, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })})`,
+          background: `rgba(10,8,6,${darkness})`,
+          pointerEvents: "none",
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          background: `linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%)`,
+          transform: `translateY(${rollY}px)`,
+          height: 220,
+          opacity: 0.5,
           pointerEvents: "none",
         }}
       />
@@ -77,7 +98,7 @@ export const Grain: React.FC = () => {
           pointerEvents: "none",
         }}
       />
-      {/* moving scanline shimmer */}
+      {/* static scanlines */}
       <AbsoluteFill
         style={{
           background:

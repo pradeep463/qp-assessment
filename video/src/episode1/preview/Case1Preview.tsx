@@ -27,6 +27,18 @@ const CARDS: { at: number; text: string }[] = [
   { at: 50.2, text: "NOT AN ACCIDENT" },
 ];
 
+// A running "field notes" line beneath the fact tag — fills the right side
+// with something that keeps changing (not just a static block of empty
+// board) and adds a second, more narrative register alongside the terse
+// fact tags.
+const NOTES: { at: number; text: string }[] = [
+  { at: 1.5, text: "A shaft, sealed for centuries." },
+  { at: 13.0, text: "Thousands of years of burials, in one pit." },
+  { at: 26.0, text: "One skull, reassembled from 52 fragments." },
+  { at: 34.5, text: "Two blows. The same object, twice." },
+  { at: 52.0, text: "Forensics doesn't guess. It measures." },
+];
+
 export const Case1Preview: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -64,6 +76,13 @@ export const Case1Preview: React.FC = () => {
       <TornCard width={170} height={140} x={-40} y={-35} rotate={-5} seed={15} color={CC.paperDark} />
       <TornCard width={150} height={150} x={1800} y={950} rotate={5} seed={16} color={CC.red} />
 
+      {/* scatter accents — fills the board so the right side doesn't read
+          as empty negative space, same "cluttered evidence wall" motif */}
+      <TornCard width={90} height={90} x={1760} y={140} rotate={8} seed={31} color={CC.paperDark} />
+      <TornCard width={110} height={80} x={1590} y={950} rotate={-6} seed={32} color={CC.red} />
+      <Pin x={1795} y={128} color={CC.bone} size={22} />
+      <Pin x={1625} y={938} color={CC.red} size={22} />
+
       {/* diagram zone: excavation -> people grid -> skull wounds -> comparison */}
       <TornCard width={560} height={560} x={110} y={300} rotate={-1.5} seed={20} color={CC.paper}>
         <AbsoluteFill style={{ padding: 60 }}>
@@ -97,9 +116,68 @@ export const Case1Preview: React.FC = () => {
         {activeCard && <FactTag key={activeIdx} text={activeCard} />}
       </div>
 
+      <FieldNotes notes={NOTES} f={f} frame={frame} x={740} y={560} width={780} height={340} />
+
       <Grain />
       <Audio src={staticFile("case1-preview.mp3")} />
     </AbsoluteFill>
+  );
+};
+
+// A lined index-card that fills the empty board area with a slower,
+// narrative "field notes" line, replacing one word at a time via a small
+// crossfade so it doesn't compete with the terse fact tags above it.
+const FieldNotes: React.FC<{
+  notes: { at: number; text: string }[];
+  f: (s: number) => number;
+  frame: number;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}> = ({ notes, f, frame, x, y, width, height }) => {
+  const { fps } = useVideoConfig();
+  let active = notes[0];
+  let idx = 0;
+  notes.forEach((n, i) => {
+    if (f(n.at) <= frame) {
+      active = n;
+      idx = i;
+    }
+  });
+  const s = spring({ frame: frame - f(active.at), fps, config: { damping: 18, mass: 0.6 } });
+
+  return (
+    <TornCard width={width} height={height} x={x} y={y} rotate={1.2} seed={40} color={CC.paper}>
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        <line x1={0} y1={height * 0.22} x2={width} y2={height * 0.22} stroke={CC.red} strokeWidth={2.4} opacity={0.55} />
+        {Array.from({ length: 5 }).map((_, i) => {
+          const yy = height * 0.22 + (i + 1) * (height * 0.62) / 5;
+          return <line key={i} x1={width * 0.06} y1={yy} x2={width * 0.94} y2={yy} stroke={CC.paperDark} strokeWidth={1.6} opacity={0.5} />;
+        })}
+      </svg>
+      <div style={{ position: "absolute", left: 44, top: 26, fontFamily: CFONT.stamp, fontSize: 18, color: CC.redDark, letterSpacing: 2 }}>
+        FIELD NOTES
+      </div>
+      <div
+        key={idx}
+        style={{
+          position: "absolute",
+          left: 44,
+          top: height * 0.34,
+          width: width - 88,
+          opacity: interpolate(s, [0, 1], [0, 1]),
+          transform: `translateY(${interpolate(s, [0, 1], [16, 0])}px)`,
+          fontFamily: CFONT.display,
+          fontStyle: "italic",
+          fontSize: 32,
+          color: CC.inkSoft,
+          lineHeight: 1.3,
+        }}
+      >
+        {active.text}
+      </div>
+    </TornCard>
   );
 };
 
