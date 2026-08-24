@@ -24,15 +24,15 @@ export const Scene1: React.FC = () => (
       <Pushpin x={95} y={35} color={COLORS.charcoal} size={38} />
 
       {/* big yellow panel holding the headline */}
-      <TornPaper width={820} height={560} color={COLORS.yellow} seed={7} x={560} y={225} rotate={-1.5}>
-        <div style={{ position: "absolute", left: 70, top: 90, width: 680 }}>
+      <TornPaper width={840} height={580} color={COLORS.yellow} seed={7} x={610} y={210} rotate={-1.5}>
+        <div style={{ position: "absolute", left: 130, top: 96, width: 640 }}>
           <Tag delay={6} bg={COLORS.red}>10-second explainer</Tag>
           <div style={{ height: 26 }} />
-          <RiseWords text="WHAT IS AI?" size={132} delay={10} color={COLORS.charcoal} />
+          <RiseWords text="WHAT IS AI?" size={128} delay={10} color={COLORS.charcoal} />
           <div style={{ height: 28 }} />
           <RiseWords
             text="Artificial Intelligence, simply put."
-            size={40}
+            size={38}
             delay={26}
             weight={700}
             color={COLORS.charcoalSoft}
@@ -42,8 +42,8 @@ export const Scene1: React.FC = () => (
       </TornPaper>
 
       {/* presenter cutout, lower-left, pointing right at the headline */}
-      <Presenter height={780} x={70} y={230} rotate={-1} />
-      <Pushpin x={1300} y={250} color={COLORS.red} size={40} />
+      <Presenter height={760} x={-60} y={235} rotate={-1} />
+      <Pushpin x={1370} y={240} color={COLORS.red} size={40} />
     </Camera>
   </AbsoluteFill>
 );

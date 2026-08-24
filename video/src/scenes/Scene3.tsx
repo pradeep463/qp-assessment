@@ -36,11 +36,11 @@ export const Scene3: React.FC = () => {
         <Pushpin x={370} y={200} color={COLORS.red} size={40} />
 
         {/* legend */}
-        <div style={{ position: "absolute", left: 760, top: 250 }}>
+        <div style={{ position: "absolute", left: 700, top: 235 }}>
           <Tag delay={4} bg={COLORS.red}>Everyday AI</Tag>
           <div style={{ height: 22 }} />
-          <div style={{ width: 640 }}>
-            <RiseWords text="AI is already everywhere." size={64} delay={8} color={COLORS.charcoal} />
+          <div style={{ width: 360 }}>
+            <RiseWords text="AI is already everywhere." size={58} delay={8} color={COLORS.charcoal} />
           </div>
           <div style={{ marginTop: 34 }}>
             {LEGEND.map((l, i) => {
@@ -67,13 +67,13 @@ export const Scene3: React.FC = () => {
           </div>
         </div>
 
-        {/* presenter on the right, pointing left toward the pie */}
-        <Presenter height={720} x={1080} y={300} flip rotate={1} />
+        {/* presenter on the right edge, pointing left toward the content */}
+        <Presenter height={760} x={1000} y={250} flip rotate={1} />
 
         {/* closing tag */}
-        <div style={{ position: "absolute", left: 760, top: 790 }}>
-          <Tag delay={44} bg={COLORS.charcoal} color={COLORS.yellow} rotate={-2} size={30}>
-            Learning from data to help you
+        <div style={{ position: "absolute", left: 700, top: 720 }}>
+          <Tag delay={44} bg={COLORS.charcoal} color={COLORS.yellow} rotate={-2} size={28}>
+            Learns from your data
           </Tag>
         </div>
       </Camera>
