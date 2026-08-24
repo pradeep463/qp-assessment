@@ -5,15 +5,34 @@ Wikipedia/news sources (see chat for citations) rather than guessed. English
 kept alongside each line for review. Card = short on-screen fact tag.
 
 **Terminology used:** ಕಾನೂನು (law, singular/abstract) · ಕೊಲೆ (murder) ·
-ಅಪರಾಧ (crime) · ಸರಣಿ ಕೊಲೆಗಾರ (serial killer) · ಫೋರೆನ್ಸಿಕ್ ವಿಜ್ಞಾನ (forensic
-science) · ಅಸ್ಥಿಪಂಜರ/ತಲೆಬುರುಡೆ (skeleton/skull) · ವಿಷ (poison) · ಬಗೆಹರಿಯದ
-ಪ್ರಕರಣ (cold case) · ಯಾರೋ + neutral-plural verb (for a person of unspecified
-gender)
+ಅಪರಾಧ (crime) · ಫೋರೆನ್ಸಿಕ್ ವಿಜ್ಞಾನ (forensic science) · ಅಸ್ಥಿಪಂಜರ/ತಲೆಬುರುಡೆ
+(skeleton/skull) · ವಿಷ (poison) · ಯಾರೋ + neutral-plural verb (for a person
+of unspecified gender)
+
+**Code-mixing pass:** revised from a pure-literary first draft toward how
+this actually gets said out loud. Kept native: everyday crime vocabulary
+that Kannada crime journalism itself uses natively rather than
+anglicizing — ಪ್ರಕರಣ (case), ಕೊಲೆ (murder), ಆರೋಪಿ (accused), ಸಾಕ್ಷಿ (witness),
+ಪೊಲೀಸ್ (police, already a fully absorbed loanword) — confirmed against real
+Kannada crime-news headlines rather than assumed. Switched to English
+(transliterated, as a true-crime audience actually says them): ಸೀರಿಯಲ್
+ಕಿಲ್ಲರ್ (serial killer) and ಕೋಲ್ಡ್ ಕೇಸ್ (cold case) — genre terms this
+audience knows from English true-crime content, where the native
+paraphrase reads more like a textbook than a person talking; ಕೊರೊನರ್
+(coroner) — a foreign institutional role with no everyday native word,
+same reasoning as ಮ್ಯಾಜಿಸ್ಟ್ರೇಟ್ which was already transliterated. Years
+switched from spelled-out textbook style (ಸಾವಿರದ ಒಂಬೈನೂರ ಎಂಬತ್ನಾಲ್ಕು) to how
+people actually say a year out loud, in two two-digit chunks (ಹತ್ತೊಂಬತ್ತು
+ಎಂಬತ್ನಾಲ್ಕು — "nineteen eighty-four"), same convention English and Hindi
+both use for years.
 
 **⚠️ Confidence note:** Hindi is well within my strong fluency; Kannada is
-not, even after this research pass. I'd treat this file as a solid working
-draft, not a final one — a single native-speaker read-through before we
-generate audio would catch things I can't.
+not, even after this research and code-mixing pass. I'd treat this file as
+a solid working draft, not a final one — a single native-speaker
+read-through before we generate audio would catch things I can't, especially
+how heavily to mix (this channel's register is documentary-serious, not a
+casual vlog, so I kept the mixing to recognizable genre/technical terms
+rather than sprinkling in casual filler words like "so"/"but"/"actually").
 
 ---
 
@@ -34,7 +53,7 @@ generate audio would catch things I can't.
    KN: ನೀವು ನೋಡಿದ ಪ್ರತಿಯೊಂದು ಟ್ರೂ ಕ್ರೈಮ್ ಕಥೆಯೂ ಇರುವುದಕ್ಕೆ ಕಾರಣ — ಹಿಂದೆ ಎಂದೋ, ಐದು ಸಂಗತಿಗಳು ಮೊದಲ ಬಾರಿಗೆ ನಡೆದಿದ್ದವು.
 
 5. EN: The first murder. The first cold case. The first law. The first serial killer. And the first time anyone used science — actual science — to catch one. **[card: 5 FIRSTS]**
-   KN: ಮೊದಲ ಕೊಲೆ. ಬಗೆಹರಿಯದ ಮೊದಲ ಪ್ರಕರಣ. ಮೊದಲ ಕಾನೂನು. ಮೊದಲ ಸರಣಿ ಕೊಲೆಗಾರ. ಮತ್ತು ಒಬ್ಬ ಕೊಲೆಗಾರನನ್ನು ಹಿಡಿಯಲು ನಿಜವಾದ ವಿಜ್ಞಾನವನ್ನು ಬಳಸಿದ ಮೊದಲ ಸಂದರ್ಭ. **[ಕಾರ್ಡ್: 5 ಮೊದಲುಗಳು]**
+   KN: ಮೊದಲ ಕೊಲೆ. ಮೊದಲ ಕೋಲ್ಡ್ ಕೇಸ್. ಮೊದಲ ಕಾನೂನು. ಮೊದಲ ಸೀರಿಯಲ್ ಕಿಲ್ಲರ್. ಮತ್ತು ಒಬ್ಬ ಕೊಲೆಗಾರನನ್ನು ಹಿಡಿಯಲು ನಿಜವಾದ ವಿಜ್ಞಾನವನ್ನು ಬಳಸಿದ ಮೊದಲ ಸಂದರ್ಭ. **[ಕಾರ್ಡ್: 5 ಮೊದಲುಗಳು]**
 
 6. EN: We're going to all five, in order — starting four hundred and thirty thousand years before any of it had a name.
    KN: ನಾವು ಈ ಐದನ್ನೂ ಕ್ರಮವಾಗಿ ನೋಡೋಣ — ಇವುಗಳಿಗೆ ಯಾವುದೇ ಹೆಸರಿಲ್ಲದಿದ್ದ ಕಾಲದಿಂದ, ಅಂದರೆ ನಾಲ್ಕು ಲಕ್ಷದ ಮೂವತ್ತು ಸಾವಿರ ವರ್ಷಗಳ ಹಿಂದಿನಿಂದ ಶುರುಮಾಡಿ.
@@ -45,7 +64,7 @@ generate audio would catch things I can't.
 ## Case 01 — The Oldest Murder (Atapuerca)
 
 8. EN: Nineteen eighty-four. Deep in the Atapuerca mountains of northern Spain, researchers find a vertical shaft, forty-three feet straight down, that opens into a cave. **[card: ATAPUERCA, SPAIN · 1984]**
-   KN: ಸಾವಿರದ ಒಂಬೈನೂರ ಎಂಬತ್ನಾಲ್ಕು. ಉತ್ತರ ಸ್ಪೇನಿನ ಅಟಪುರ್ಕಾ ಪರ್ವತಗಳ ಆಳದಲ್ಲಿ, ಗುಹೆಗೆ ತೆರೆದುಕೊಳ್ಳುವ, ನಲವತ್ಮೂರು ಅಡಿ ಆಳದ ಒಂದು ಗುಂಡಿ ಸಂಶೋಧಕರಿಗೆ ಸಿಕ್ಕಿತು. **[ಕಾರ್ಡ್: ಅಟಪುರ್ಕಾ, ಸ್ಪೇನ್ · 1984]**
+   KN: ಹತ್ತೊಂಬತ್ತು ಎಂಬತ್ನಾಲ್ಕು. ಉತ್ತರ ಸ್ಪೇನಿನ ಅಟಪುರ್ಕಾ ಪರ್ವತಗಳ ಆಳದಲ್ಲಿ, ಗುಹೆಗೆ ತೆರೆದುಕೊಳ್ಳುವ, ನಲವತ್ಮೂರು ಅಡಿ ಆಳದ ಒಂದು ಗುಂಡಿ ಸಂಶೋಧಕರಿಗೆ ಸಿಕ್ಕಿತು. **[ಕಾರ್ಡ್: ಅಟಪುರ್ಕಾ, ಸ್ಪೇನ್ · 1984]**
 
 9. EN: Inside: the bones of at least twenty-eight people. Thousands of years of an entire population, dumped at the bottom of a pit. **[card: 28 INDIVIDUALS]**
    KN: ಆ ಗುಂಡಿಯ ಒಳಗೆ: ಕನಿಷ್ಠ ಇಪ್ಪತ್ತೆಂಟು ಜನರ ಮೂಳೆಗಳು. ಸಾವಿರಾರು ವರ್ಷಗಳ ಒಂದು ಇಡೀ ಸಮುದಾಯ, ಗುಂಡಿಯ ತಳದಲ್ಲಿ ಬಿದ್ದಿತ್ತು. **[ಕಾರ್ಡ್: 28 ಜನರು]**
@@ -94,7 +113,7 @@ generate audio would catch things I can't.
 ## Case 02 — The Oldest Cold Case (Ötzi)
 
 23. EN: September, nineteen ninety-one. Two German hikers, off the marked trail near a glacier, find a body sticking out of the melting ice. **[card: ÖTZTAL ALPS · 1991]**
-    KN: ಸೆಪ್ಟೆಂಬರ್, ಸಾವಿರದ ಒಂಬೈನೂರ ತೊಂಬತ್ತೊಂದು. ಇಬ್ಬರು ಜರ್ಮನ್ ಚಾರಣಿಗರಿಗೆ, ಒಂದು ಹಿಮನದಿಯ ಬಳಿ ಗುರುತಿಸಿದ ದಾರಿ ಬಿಟ್ಟು ನಡೆಯುತ್ತಿದ್ದಾಗ, ಕರಗುತ್ತಿದ್ದ ಮಂಜಿನಿಂದ ಹೊರಬಂದ ಒಂದು ಶವ ಕಾಣಿಸುತ್ತದೆ. **[ಕಾರ್ಡ್: ಓಟ್ಸ್‌ಟಾಲ್ ಆಲ್ಪ್ಸ್ · 1991]**
+    KN: ಸೆಪ್ಟೆಂಬರ್, ಹತ್ತೊಂಬತ್ತು ತೊಂಬತ್ತೊಂದು. ಇಬ್ಬರು ಜರ್ಮನ್ ಚಾರಣಿಗರಿಗೆ, ಒಂದು ಹಿಮನದಿಯ ಬಳಿ ಗುರುತಿಸಿದ ದಾರಿ ಬಿಟ್ಟು ನಡೆಯುತ್ತಿದ್ದಾಗ, ಕರಗುತ್ತಿದ್ದ ಮಂಜಿನಿಂದ ಹೊರಬಂದ ಒಂದು ಶವ ಕಾಣಿಸುತ್ತದೆ. **[ಕಾರ್ಡ್: ಓಟ್ಸ್‌ಟಾಲ್ ಆಲ್ಪ್ಸ್ · 1991]**
 
 24. EN: It takes days before anyone realizes what they actually found: a man, freeze-dried by the ice for over five thousand years. Skin, organs, even his last meal — all still intact. **[card: 5,300 YEARS OLD]**
     KN: ಅವರಿಗೆ ಸಿಕ್ಕಿದ್ದು ನಿಜವಾಗಿ ಏನೆಂದು ಅರಿವಾಗಲು ಹಲವು ದಿನಗಳೇ ಬೇಕಾಗುತ್ತವೆ: ಐದು ಸಾವಿರಕ್ಕೂ ಹೆಚ್ಚು ವರ್ಷಗಳಿಂದ ಮಂಜಿನಲ್ಲಿ ಹೆಪ್ಪುಗಟ್ಟಿ ಸುರಕ್ಷಿತವಾಗಿದ್ದ ಒಬ್ಬ ಮನುಷ್ಯ. ಚರ್ಮ, ಅಂಗಾಂಗಗಳು, ಅವನ ಕೊನೆಯ ಊಟ ಕೂಡ — ಎಲ್ಲವೂ ಹಾಗೆಯೇ ಇದ್ದವು. **[ಕಾರ್ಡ್: 5,300 ವರ್ಷ ಹಳೆಯದು]**
@@ -121,7 +140,7 @@ generate audio would catch things I can't.
     KN: ಇವೆಲ್ಲವನ್ನೂ ಒಟ್ಟಾಗಿ ನೋಡಿದರೆ, ಇದು ಒಂದು ದೀರ್ಘ ಕಥೆಯ ಕೊನೆಯ ಅಧ್ಯಾಯದಂತೆ ಕಾಣುತ್ತದೆ: ಒಂದು ಸಂಘರ್ಷ, ಅವನು ಬದುಕುಳಿದ ಒಂದು ಜಗಳ, ಮತ್ತು ನಂತರ, ಕೆಲವು ದಿನಗಳ ಬಳಿಕ, ಅವನು ಬದುಕುಳಿಯದ ಒಂದು ಹೊಂಚುದಾಳಿ.
 
 32. EN: Ötzi is, formally, the oldest cold case on Earth. Full forensic file. Known cause of death. Known weapon. **[card: OLDEST COLD CASE]**
-    KN: ಔಪಚಾರಿಕವಾಗಿ, ಓಟ್ಸಿ ಭೂಮಿಯ ಮೇಲಿನ ಅತ್ಯಂತ ಹಳೆಯ ಬಗೆಹರಿಯದ ಪ್ರಕರಣ. ಸಂಪೂರ್ಣ ಫೋರೆನ್ಸಿಕ್ ಕಡತ. ಗೊತ್ತಿರುವ ಸಾವಿನ ಕಾರಣ. ಗೊತ್ತಿರುವ ಆಯುಧ. **[ಕಾರ್ಡ್: ಅತ್ಯಂತ ಹಳೆಯ ಪ್ರಕರಣ]**
+    KN: ಔಪಚಾರಿಕವಾಗಿ, ಓಟ್ಸಿ ಭೂಮಿಯ ಮೇಲಿನ ಅತ್ಯಂತ ಹಳೆಯ ಕೋಲ್ಡ್ ಕೇಸ್. ಸಂಪೂರ್ಣ ಫೋರೆನ್ಸಿಕ್ ಕಡತ. ಗೊತ್ತಿರುವ ಸಾವಿನ ಕಾರಣ. ಗೊತ್ತಿರುವ ಆಯುಧ. **[ಕಾರ್ಡ್: ಅತ್ಯಂತ ಹಳೆಯ ಕೋಲ್ಡ್ ಕೇಸ್]**
 
 33. EN: And after more than thirty years of investigation — zero suspects. The case is, and will always be, open. **[card: STATUS: OPEN]**
     KN: ಮೂವತ್ತಕ್ಕೂ ಹೆಚ್ಚು ವರ್ಷಗಳ ತನಿಖೆಯ ನಂತರವೂ — ಒಬ್ಬನೇ ಒಬ್ಬ ಶಂಕಿತನಿಲ್ಲ. ಈ ಪ್ರಕರಣ ತೆರೆದಿದೆ, ಮತ್ತು ಸದಾ ತೆರೆದೇ ಇರುತ್ತದೆ. **[ಕಾರ್ಡ್: ಸ್ಥಿತಿ: ತೆರೆದಿದೆ]**
@@ -189,7 +208,7 @@ generate audio would catch things I can't.
     KN: ನೀರೋನ ಆದೇಶದಂತೆ, ಅವಳ ಮುಂದಿನ ಗುರಿ ಬ್ರಿಟಾನಿಕಸ್ — ಕ್ಲಾಡಿಯಸ್‌ನ ಸ್ವಂತ ಮಗ. ಊಟದ ಸಮಯದಲ್ಲಿ, ಸಾಕ್ಷಿಗಳ ಎದುರಿನಲ್ಲೇ ವಿಷ ನೀಡಲಾಯಿತು — ಇದ್ದಕ್ಕಿದ್ದಂತೆ ಬಂದ ಫಿಟ್ಸ್‌ನಂತೆ ತೋರಿಸಲಾಯಿತು.
 
 52. EN: This is why historians call Locusta one of the earliest documented serial killers in the record: multiple victims, a repeatable method, and, for years, an employer who protected her instead of a court that punished her. **[card: EARLIEST DOCUMENTED SERIAL KILLER]**
-    KN: ಇದೇ ಕಾರಣಕ್ಕೆ ಇತಿಹಾಸಕಾರರು ಲೊಕುಸ್ಟಾಳನ್ನು ದಾಖಲಿತ ಇತಿಹಾಸದ ಅತ್ಯಂತ ಮುಂಚಿನ ಸರಣಿ ಕೊಲೆಗಾರರಲ್ಲಿ ಒಬ್ಬಳೆಂದು ಕರೆಯುತ್ತಾರೆ: ಹಲವು ಸಂತ್ರಸ್ತರು, ಪುನರಾವರ್ತಿಸಬಹುದಾದ ವಿಧಾನ, ಮತ್ತು ಹಲವು ವರ್ಷಗಳ ಕಾಲ, ಶಿಕ್ಷಿಸುವ ನ್ಯಾಯಾಲಯದ ಬದಲು ರಕ್ಷಿಸುವ ಒಡೆಯ. **[ಕಾರ್ಡ್: ಮೊದಲ ದಾಖಲಿತ ಸರಣಿ ಕೊಲೆಗಾರ್ತಿ]**
+    KN: ಇದೇ ಕಾರಣಕ್ಕೆ ಇತಿಹಾಸಕಾರರು ಲೊಕುಸ್ಟಾಳನ್ನು ದಾಖಲಿತ ಇತಿಹಾಸದ ಅತ್ಯಂತ ಮುಂಚಿನ ಸೀರಿಯಲ್ ಕಿಲ್ಲರ್‌ಗಳಲ್ಲಿ ಒಬ್ಬಳೆಂದು ಕರೆಯುತ್ತಾರೆ: ಹಲವು ಸಂತ್ರಸ್ತರು, ಪುನರಾವರ್ತಿಸಬಹುದಾದ ವಿಧಾನ, ಮತ್ತು ಹಲವು ವರ್ಷಗಳ ಕಾಲ, ಶಿಕ್ಷಿಸುವ ನ್ಯಾಯಾಲಯದ ಬದಲು ರಕ್ಷಿಸುವ ಒಡೆಯ. **[ಕಾರ್ಡ್: ಮೊದಲ ದಾಖಲಿತ ಸೀರಿಯಲ್ ಕಿಲ್ಲರ್]**
 
 53. EN: When Nero eventually died, his successor had her executed. But by then, the method she'd built had already outlived multiple emperors.
     KN: ಕೊನೆಗೆ ನೀರೋ ಸತ್ತಾಗ, ಅವನ ಉತ್ತರಾಧಿಕಾರಿ ಲೊಕುಸ್ಟಾಳಿಗೆ ಮರಣದಂಡನೆ ವಿಧಿಸಿದ. ಆದರೆ ಅಷ್ಟರಲ್ಲಾಗಲೇ, ಅವಳು ರೂಪಿಸಿದ ವಿಧಾನ ಹಲವು ಚಕ್ರವರ್ತಿಗಳಿಗಿಂತ ಹೆಚ್ಚು ಕಾಲ ಬದುಕುಳಿದಿತ್ತು.
@@ -200,12 +219,12 @@ generate audio would catch things I can't.
     KN: ಅದಾದ ಮೇಲೆ ಮಾನವ ಇತಿಹಾಸದ ಬಹುಪಾಲು ಕಾಲ, ಕೊಲೆ ಬಗೆಹರಿಸುವುದೆಂದರೆ ಒಂದೇ ಅರ್ಥ: ಸಾಕ್ಷಿಯನ್ನು ಹುಡುಕುವುದು, ಇಲ್ಲವೇ ಬಲವಂತವಾಗಿ ಒಪ್ಪಿಗೆ ಪಡೆಯುವುದು. ಅಷ್ಟೇ ಇದ್ದದ್ದು ಪೂರ್ಣ ಸಾಧನ.
 
 55. EN: Then, in the year twelve forty-seven, one man in China wrote down a method that had nothing to do with witnesses, torture, or confessions at all.
-    KN: ನಂತರ, ಸಾವಿರದ ಇನ್ನೂರ ನಲವತ್ತೇಳರಲ್ಲಿ, ಚೀನಾದ ಒಬ್ಬ ವ್ಯಕ್ತಿ ಸಾಕ್ಷಿ, ಚಿತ್ರಹಿಂಸೆ, ಅಥವಾ ಒಪ್ಪಿಗೆಗೆ ಯಾವುದೇ ಸಂಬಂಧವಿಲ್ಲದ ಒಂದು ವಿಧಾನವನ್ನು ಬರೆದಿಟ್ಟ.
+    KN: ನಂತರ, ಹನ್ನೆರಡು ನಲವತ್ತೇಳರಲ್ಲಿ, ಚೀನಾದ ಒಬ್ಬ ವ್ಯಕ್ತಿ ಸಾಕ್ಷಿ, ಚಿತ್ರಹಿಂಸೆ, ಅಥವಾ ಒಪ್ಪಿಗೆಗೆ ಯಾವುದೇ ಸಂಬಂಧವಿಲ್ಲದ ಒಂದು ವಿಧಾನವನ್ನು ಬರೆದಿಟ್ಟ.
 
 ## Case 05 — The First Forensic Scientist (Song Ci)
 
 56. EN: His name was Song Ci, a coroner, and a judge. In twelve forty-seven, he compiled everything he'd learned into a book called The Washing Away of Wrongs. **[card: CHINA · 1247 AD]**
-    KN: ಅವನ ಹೆಸರು ಸಾಂಗ್ ಟ್ಸೀ — ಒಬ್ಬ ಶವಪರೀಕ್ಷಕ, ಮತ್ತು ಒಬ್ಬ ನ್ಯಾಯಾಧೀಶ. ಸಾವಿರದ ಇನ್ನೂರ ನಲವತ್ತೇಳರಲ್ಲಿ, ಅವನು ಕಲಿತಿದ್ದೆಲ್ಲವನ್ನೂ "ದ ವಾಷಿಂಗ್ ಅವೇ ಆಫ್ ರಾಂಗ್ಸ್" ಎಂಬ ಪುಸ್ತಕದಲ್ಲಿ ಸಂಗ್ರಹಿಸಿದ. **[ಕಾರ್ಡ್: ಚೀನಾ · 1247]**
+    KN: ಅವನ ಹೆಸರು ಸಾಂಗ್ ಟ್ಸೀ — ಒಬ್ಬ ಕೊರೊನರ್, ಮತ್ತು ಒಬ್ಬ ನ್ಯಾಯಾಧೀಶ. ಹನ್ನೆರಡು ನಲವತ್ತೇಳರಲ್ಲಿ, ಅವನು ಕಲಿತಿದ್ದೆಲ್ಲವನ್ನೂ "ದ ವಾಷಿಂಗ್ ಅವೇ ಆಫ್ ರಾಂಗ್ಸ್" ಎಂಬ ಪುಸ್ತಕದಲ್ಲಿ ಸಂಗ್ರಹಿಸಿದ. **[ಕಾರ್ಡ್: ಚೀನಾ · 1247]**
 
 57. EN: It's recognized today as the world's first textbook of forensic science. **[card: SONG CI]**
     KN: ಇಂದು ಇದನ್ನು ಜಗತ್ತಿನ ಮೊದಲ ಫೋರೆನ್ಸಿಕ್ ವಿಜ್ಞಾನದ ಪಠ್ಯಪುಸ್ತಕವೆಂದು ಗುರುತಿಸಲಾಗಿದೆ. **[ಕಾರ್ಡ್: ಸಾಂಗ್ ಟ್ಸೀ]**
