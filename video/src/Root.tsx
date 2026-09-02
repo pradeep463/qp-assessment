@@ -7,6 +7,11 @@ import { WelcomeBumper } from "./episode1/scenes/WelcomeBumper";
 import { Outro } from "./episode1/scenes/Outro";
 import { Thumbnail } from "./episode1/Thumbnail";
 import { Case1Preview } from "./episode1/preview/Case1Preview";
+import { Sample, sampleDurationInFrames } from "./episode1/Sample";
+import { AtlasSample, atlasSampleDurationInFrames } from "./episode1/AtlasSample";
+import { Episode2, episode2DurationInFrames } from "./episode1/Episode2";
+import { CipherSample } from "./episode1/cipher/CipherSample";
+import { Thumbnail2 } from "./episode1/atlas/Thumbnail2";
 import { VIDEO } from "./theme";
 import { CVIDEO } from "./crime/theme";
 import { EVIDEO } from "./episode1/theme";
@@ -72,6 +77,47 @@ export const RemotionRoot: React.FC = () => (
       fps={EVIDEO.fps}
       width={1280}
       height={720}
+    />
+    <Composition
+      id="Sample30s"
+      component={Sample}
+      durationInFrames={sampleDurationInFrames}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
+    />
+    <Composition
+      id="AtlasSample30s"
+      component={AtlasSample}
+      durationInFrames={atlasSampleDurationInFrames}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
+    />
+    <Composition
+      id="Episode2"
+      component={Episode2}
+      durationInFrames={episode2DurationInFrames}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
+      defaultProps={{ voiceover: true }}
+    />
+    <Composition
+      id="Thumbnail2"
+      component={Thumbnail2}
+      durationInFrames={1}
+      fps={EVIDEO.fps}
+      width={1280}
+      height={720}
+    />
+    <Composition
+      id="CipherSample"
+      component={CipherSample}
+      durationInFrames={Math.round(18 * EVIDEO.fps)}
+      fps={EVIDEO.fps}
+      width={EVIDEO.width}
+      height={EVIDEO.height}
     />
     <Composition
       id="Case1Preview"

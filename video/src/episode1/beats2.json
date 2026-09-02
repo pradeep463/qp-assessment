@@ -1,0 +1,44 @@
+{
+  "beats": [
+    { "case": 0, "text": "Before fingerprints. Before DNA. Before anyone had a word for forensic science at all --", "card": null },
+    { "case": 0, "text": "there was just a hunch, and a body, and no way to prove either one.", "card": null },
+    { "case": 0, "text": "This is CipherStudios. These are the first five times science ever caught a killer.", "card": "THE FIRST DETECTIVES" },
+
+    { "case": 1, "text": "Five techniques. Five people who never met each other. A hundred and forty-eight years apart.", "card": null },
+    { "case": 1, "text": "Every single one of them -- the first time it had ever been done.", "card": null },
+    { "case": 1, "text": "Welcome to Case File 002.", "card": null },
+
+    { "case": 2, "text": "Le Glandier, France. 1840. Charles Lafarge is dying -- slowly -- and his young wife Marie is the one bringing him his food.", "card": null },
+    { "case": 2, "text": "Doctors suspect arsenic. The problem: in 1840, there's no reliable way to prove poison in a body, only in a cup.", "card": null },
+    { "case": 2, "text": "So chemist Mathieu Orfila does something no courtroom has seen before -- the Marsh test, turning invisible poison into a visible mirror of metal on glass.", "card": "THE MARSH TEST" },
+    { "case": 2, "text": "The result: undeniable arsenic. Marie Lafarge is convicted on forensic chemistry alone -- the first time in history.", "card": "FIRST TOXICOLOGY CONVICTION — 1840" },
+    { "case": 2, "text": "France is still arguing about whether Orfila got it right.", "card": null },
+
+    { "case": 3, "text": "Necochea, Argentina. A mother, cut at the throat. Her two children, dead beside her.", "card": null },
+    { "case": 3, "text": "She blamed a neighbor. The police believed her -- for one day.", "card": null },
+    { "case": 3, "text": "Then someone noticed the bloody thumbprint on the bedroom door -- it didn't belong to the neighbor at all.", "card": "ONE THUMBPRINT" },
+    { "case": 3, "text": "It matched the file Inspector Alvarez had just built.", "card": "FIRST FINGERPRINT MATCH — 1892" },
+    { "case": 3, "text": "A system no one had ever used to solve a murder before.", "card": null },
+    { "case": 3, "text": "Confronted with her own thumb, Francisca Rojas confessed.", "card": null },
+
+    { "case": 4, "text": "West Shelby, New York. 1915. Charles Stielow is found with his boss's housekeeper dead beside him.", "card": null },
+    { "case": 4, "text": "A firearms expert told the jury Stielow's revolver fired the fatal bullets. He was five weeks from the electric chair.", "card": "5 WEEKS FROM EXECUTION" },
+    { "case": 4, "text": "There was one problem -- the expert had never actually compared the bullets to the gun.", "card": null },
+    { "case": 4, "text": "A real forensic ballistics exam, under a comparison microscope, found the bullets didn't match his gun at all.", "card": "THE BULLETS DIDN'T MATCH" },
+    { "case": 4, "text": "The wrong man walked free. Ballistics testimony would never be taken on faith again.", "card": null },
+
+    { "case": 5, "text": "New York City. 1956. For sixteen years, a bomber has planted devices across the city and vanished every time.", "card": null },
+    { "case": 5, "text": "Police call in psychiatrist James Brussel. He predicts a foreign-born man, in his forties, a grudge against Con Edison.", "card": "THE FIRST PROFILE" },
+    { "case": 5, "text": "He even predicts the suit -- buttoned, double-breasted -- the bomber will be wearing when they find him.", "card": null },
+    { "case": 5, "text": "They arrest George Metesky. He's wearing exactly that suit.", "card": "FIRST OFFENDER PROFILE — 1956" },
+
+    { "case": 6, "text": "Leicestershire, England. 1988. Two girls murdered three years apart. Police test every man in three villages.", "card": null },
+    { "case": 6, "text": "The same new test -- DNA fingerprinting -- had already cleared an innocent teenager months earlier.", "card": "FIRST DNA EXONERATION" },
+    { "case": 6, "text": "Colin Pitchfork paid a friend to give blood in his place. The swap itself was the tell.", "card": null },
+    { "case": 6, "text": "When it unraveled, his own sample matched both girls.", "card": "FIRST DNA CONVICTION — 1988" },
+
+    { "case": 7, "text": "Five techniques. Five countries. A hundred and forty-eight years.", "card": null },
+    { "case": 7, "text": "Every one of them started the same way -- as somebody's untested hunch.", "card": null },
+    { "case": 7, "text": "This has been Case File 002. If you want to be here for Case File 003, subscribe. CipherStudios.", "card": "SUBSCRIBE — CIPHERSTUDIOS" }
+  ]
+}

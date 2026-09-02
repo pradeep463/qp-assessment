@@ -1,0 +1,304 @@
+{
+  "totalSeconds": 213.497,
+  "voice": "am_onyx",
+  "speed": 0.93,
+  "beats": [
+    {
+      "i": 0,
+      "case": 0,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Before fingerprints. Before DNA. Before anyone had a word for forensic science at all --",
+      "start": 0.6,
+      "end": 5.357
+    },
+    {
+      "i": 1,
+      "case": 0,
+      "bridgeTo": null,
+      "card": null,
+      "text": "there was just a hunch, and a body, and no way to prove either one.",
+      "start": 5.807,
+      "end": 9.946
+    },
+    {
+      "i": 2,
+      "case": 0,
+      "bridgeTo": null,
+      "card": "THE FIRST DETECTIVES",
+      "text": "This is CipherStudios. These are the first five times science ever caught a killer.",
+      "start": 10.396,
+      "end": 15.665
+    },
+    {
+      "i": 3,
+      "case": 1,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Five techniques. Five people who never met each other. A hundred and forty-eight years apart.",
+      "start": 16.615,
+      "end": 22.354
+    },
+    {
+      "i": 4,
+      "case": 1,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Every single one of them -- the first time it had ever been done.",
+      "start": 22.804,
+      "end": 26.708
+    },
+    {
+      "i": 5,
+      "case": 1,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Welcome to Case File 002.",
+      "start": 27.158,
+      "end": 30.571
+    },
+    {
+      "i": 6,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Le Glandier, France. 1840. Charles Lafarge is dying -- slowly -- and his young wife Marie is the one bringing him his food.",
+      "start": 31.521,
+      "end": 40.097
+    },
+    {
+      "i": 7,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Doctors suspect arsenic. The problem: in 1840, there's no reliable way to prove poison in a body, only in a cup.",
+      "start": 40.547,
+      "end": 49.486
+    },
+    {
+      "i": 8,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "THE MARSH TEST",
+      "text": "So chemist Mathieu Orfila does something no courtroom has seen before -- the Marsh test, turning invisible poison into a visible mirror of metal on glass.",
+      "start": 49.936,
+      "end": 59.323
+    },
+    {
+      "i": 9,
+      "case": 2,
+      "bridgeTo": null,
+      "card": "FIRST TOXICOLOGY CONVICTION — 1840",
+      "text": "The result: undeniable arsenic. Marie Lafarge is convicted on forensic chemistry alone -- the first time in history.",
+      "start": 59.773,
+      "end": 67.623
+    },
+    {
+      "i": 10,
+      "case": 2,
+      "bridgeTo": null,
+      "card": null,
+      "text": "France is still arguing about whether Orfila got it right.",
+      "start": 68.073,
+      "end": 72.127
+    },
+    {
+      "i": 11,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Necochea, Argentina. A mother, cut at the throat. Her two children, dead beside her.",
+      "start": 73.077,
+      "end": 78.623
+    },
+    {
+      "i": 12,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "She blamed a neighbor. The police believed her -- for one day.",
+      "start": 79.073,
+      "end": 82.849
+    },
+    {
+      "i": 13,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "ONE THUMBPRINT",
+      "text": "Then someone noticed the bloody thumbprint on the bedroom door -- it didn't belong to the neighbor at all.",
+      "start": 83.299,
+      "end": 89.294
+    },
+    {
+      "i": 14,
+      "case": 3,
+      "bridgeTo": null,
+      "card": "FIRST FINGERPRINT MATCH — 1892",
+      "text": "It matched the file Inspector Alvarez had just built.",
+      "start": 89.744,
+      "end": 93.499
+    },
+    {
+      "i": 15,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "A system no one had ever used to solve a murder before.",
+      "start": 93.949,
+      "end": 97.789
+    },
+    {
+      "i": 16,
+      "case": 3,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Confronted with her own thumb, Francisca Rojas confessed.",
+      "start": 98.239,
+      "end": 102.313
+    },
+    {
+      "i": 17,
+      "case": 4,
+      "bridgeTo": null,
+      "card": null,
+      "text": "West Shelby, New York. 1915. Charles Stielow is found with his boss's housekeeper dead beside him.",
+      "start": 103.263,
+      "end": 110.581
+    },
+    {
+      "i": 18,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "5 WEEKS FROM EXECUTION",
+      "text": "A firearms expert told the jury Stielow's revolver fired the fatal bullets. He was five weeks from the electric chair.",
+      "start": 111.031,
+      "end": 118.732
+    },
+    {
+      "i": 19,
+      "case": 4,
+      "bridgeTo": null,
+      "card": null,
+      "text": "There was one problem -- the expert had never actually compared the bullets to the gun.",
+      "start": 119.182,
+      "end": 124.195
+    },
+    {
+      "i": 20,
+      "case": 4,
+      "bridgeTo": null,
+      "card": "THE BULLETS DIDN'T MATCH",
+      "text": "A real forensic ballistics exam, under a comparison microscope, found the bullets didn't match his gun at all.",
+      "start": 124.645,
+      "end": 131.792
+    },
+    {
+      "i": 21,
+      "case": 4,
+      "bridgeTo": null,
+      "card": null,
+      "text": "The wrong man walked free. Ballistics testimony would never be taken on faith again.",
+      "start": 132.242,
+      "end": 137.767
+    },
+    {
+      "i": 22,
+      "case": 5,
+      "bridgeTo": null,
+      "card": null,
+      "text": "New York City. 1956. For sixteen years, a bomber has planted devices across the city and vanished every time.",
+      "start": 138.717,
+      "end": 148.621
+    },
+    {
+      "i": 23,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "THE FIRST PROFILE",
+      "text": "Police call in psychiatrist James Brussel. He predicts a foreign-born man, in his forties, a grudge against Con Edison.",
+      "start": 149.071,
+      "end": 157.007
+    },
+    {
+      "i": 24,
+      "case": 5,
+      "bridgeTo": null,
+      "card": null,
+      "text": "He even predicts the suit -- buttoned, double-breasted -- the bomber will be wearing when they find him.",
+      "start": 157.457,
+      "end": 163.217
+    },
+    {
+      "i": 25,
+      "case": 5,
+      "bridgeTo": null,
+      "card": "FIRST OFFENDER PROFILE — 1956",
+      "text": "They arrest George Metesky. He's wearing exactly that suit.",
+      "start": 163.667,
+      "end": 167.977
+    },
+    {
+      "i": 26,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Leicestershire, England. 1988. Two girls murdered three years apart. Police test every man in three villages.",
+      "start": 168.927,
+      "end": 176.692
+    },
+    {
+      "i": 27,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "FIRST DNA EXONERATION",
+      "text": "The same new test -- DNA fingerprinting -- had already cleared an innocent teenager months earlier.",
+      "start": 177.142,
+      "end": 183.222
+    },
+    {
+      "i": 28,
+      "case": 6,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Colin Pitchfork paid a friend to give blood in his place. The swap itself was the tell.",
+      "start": 183.672,
+      "end": 189.197
+    },
+    {
+      "i": 29,
+      "case": 6,
+      "bridgeTo": null,
+      "card": "FIRST DNA CONVICTION — 1988",
+      "text": "When it unraveled, his own sample matched both girls.",
+      "start": 189.647,
+      "end": 193.359
+    },
+    {
+      "i": 30,
+      "case": 7,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Five techniques. Five countries. A hundred and forty-eight years.",
+      "start": 194.309,
+      "end": 198.661
+    },
+    {
+      "i": 31,
+      "case": 7,
+      "bridgeTo": null,
+      "card": null,
+      "text": "Every one of them started the same way -- as somebody's untested hunch.",
+      "start": 199.111,
+      "end": 203.655
+    },
+    {
+      "i": 32,
+      "case": 7,
+      "bridgeTo": null,
+      "card": "SUBSCRIBE — CIPHERSTUDIOS",
+      "text": "This has been Case File 002. If you want to be here for Case File 003, subscribe. CipherStudios.",
+      "start": 204.105,
+      "end": 212.297
+    }
+  ]
+}

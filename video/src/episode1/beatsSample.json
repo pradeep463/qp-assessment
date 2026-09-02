@@ -1,0 +1,10 @@
+{
+  "beats": [
+    { "case": 1, "text": "Necochea, Argentina. A mother, cut at the throat. Her two children, dead beside her.", "card": null },
+    { "case": 1, "text": "She blamed a neighbor. The police believed her — for one day.", "card": null },
+    { "case": 1, "text": "Then someone noticed the bloody thumbprint on the bedroom door — it didn't belong to the neighbor at all.", "card": "ONE THUMBPRINT" },
+    { "case": 1, "text": "It matched the file Inspector Alvarez had just built.", "card": "FIRST FINGERPRINT MATCH — 1892" },
+    { "case": 1, "text": "A system no one had ever used to solve a murder before.", "card": null },
+    { "case": 1, "text": "Confronted with her own thumb, Francisca Rojas confessed.", "card": null }
+  ]
+}
